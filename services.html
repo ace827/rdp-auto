@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Services | RDP Auto & Small Engine — Mobile Mechanic Cape Cod</title>
+<meta name="description" content="Auto repair, brake service, oil changes, small engine repair, welding & more. Mobile mechanic serving Cape Cod from Falmouth to Eastham. (774) 209-2270"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+<style>
+:root{--ink:#0d1b2a;--ink2:#122233;--ink3:#1a2f42;--blue:#1e6fbf;--blue2:#2563eb;--amber:#d97706;--amber2:#f59e0b;--off:#f8f9fb;--warm:#eef2f7;--border:#d0dae6;--mid:#6b7e94;--dark:#2d3f52;--card:#f0f4f9;--white:#ffffff}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;color:var(--dark);background:var(--white);line-height:1.6}
+h1,h2,h3,h4{font-family:'Raleway',sans-serif;line-height:1.15}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+.topbar{background:var(--ink);color:#a8bdd0;font-size:0.8rem;padding:8px 0}
+.topbar-inner{max-width:1200px;margin:0 auto;padding:0 24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px}
+.topbar-left{display:flex;gap:20px;flex-wrap:wrap}
+.topbar-left span{display:flex;align-items:center;gap:6px}
+.topbar-cta{background:var(--amber);color:var(--ink);font-weight:700;font-size:0.8rem;padding:6px 16px;border-radius:4px;white-space:nowrap;display:flex;align-items:center;gap:6px}
+nav{background:var(--white);border-bottom:2px solid var(--border);position:sticky;top:0;z-index:100;box-shadow:0 2px 12px rgba(13,27,42,0.08)}
+.nav-inner{max-width:1200px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:68px}
+.logo{display:flex;align-items:center;gap:12px}
+.logo-mark{width:40px;height:40px;background:var(--ink);border-radius:8px;display:flex;align-items:center;justify-content:center}
+.logo-name{font-family:'Raleway',sans-serif;font-weight:900;font-size:1.1rem;color:var(--ink);line-height:1.1}
+.logo-sub{font-size:0.7rem;color:var(--mid);letter-spacing:0.05em;text-transform:uppercase}
+.logo-text{display:flex;flex-direction:column}
+.nav-links{display:flex;align-items:center;gap:28px}
+.nav-links a{font-size:0.9rem;font-weight:600;color:var(--dark);transition:color 0.2s;padding-bottom:4px;position:relative}
+.nav-links a::after{content:'';position:absolute;bottom:0;left:0;width:0;height:2px;background:var(--amber);transition:width 0.2s}
+.nav-links a:hover,.nav-links a.active{color:var(--blue2)}
+.nav-links a.active::after,.nav-links a:hover::after{width:100%}
+.nav-cta{background:var(--blue2);color:var(--white);font-weight:700;font-size:0.85rem;padding:10px 22px;border-radius:6px;display:flex;align-items:center;gap:8px;transition:background 0.2s}
+.nav-cta:hover{background:var(--ink)}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px}
+.hamburger span{width:24px;height:2px;background:var(--ink);border-radius:2px}
+.mobile-menu{display:none;position:fixed;top:68px;left:0;right:0;background:var(--white);border-bottom:2px solid var(--border);padding:20px 24px;z-index:99;flex-direction:column;gap:16px;box-shadow:0 8px 24px rgba(0,0,0,0.1)}
+.mobile-menu a{font-weight:600;color:var(--dark);font-size:1rem;padding:8px 0;border-bottom:1px solid var(--border)}
+.mobile-menu .nav-cta{margin-top:8px;justify-content:center;border:none}
+/* PAGE HERO */
+.page-hero{background:var(--ink);padding:80px 24px 64px;text-align:center}
+.page-hero-inner{max-width:700px;margin:0 auto}
+.page-hero-tag{display:inline-block;background:rgba(217,119,6,0.15);border:1px solid rgba(217,119,6,0.3);color:var(--amber2);font-size:0.75rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;padding:5px 14px;border-radius:100px;margin-bottom:16px}
+.page-hero h1{font-size:clamp(2rem,4.5vw,3.2rem);font-weight:900;color:var(--white);margin-bottom:16px}
+.page-hero p{font-size:1.05rem;color:rgba(255,255,255,0.7);line-height:1.75}
+/* SECTION */
+.section{padding:80px 24px}
+.section-inner{max-width:1200px;margin:0 auto}
+.section-tag{display:inline-block;background:rgba(37,99,235,0.08);color:var(--blue2);font-size:0.75rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;padding:5px 14px;border-radius:100px;margin-bottom:14px;border:1px solid rgba(37,99,235,0.15)}
+.section-title{font-size:clamp(1.6rem,3vw,2.4rem);font-weight:900;color:var(--ink);margin-bottom:16px}
+.section-sub{font-size:1rem;color:var(--mid);line-height:1.75}
+/* SERVICE DETAIL */
+.service-block{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;padding:72px 0;border-bottom:1px solid var(--border)}
+.service-block:last-child{border-bottom:none}
+.service-block.flip{direction:rtl}
+.service-block.flip > *{direction:ltr}
+.service-img{border-radius:16px;overflow:hidden;height:380px;box-shadow:0 12px 40px rgba(13,27,42,0.12)}
+.service-img img{width:100%;height:100%;object-fit:cover}
+.service-content .tag{display:inline-block;background:rgba(217,119,6,0.1);color:var(--amber);font-size:0.75rem;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;padding:4px 12px;border-radius:100px;margin-bottom:14px;border:1px solid rgba(217,119,6,0.2)}
+.service-content h2{font-size:clamp(1.5rem,2.5vw,2rem);font-weight:900;color:var(--ink);margin-bottom:14px}
+.service-content p{font-size:0.95rem;color:var(--mid);line-height:1.75;margin-bottom:20px}
+.service-bullets{list-style:none;margin-bottom:24px}
+.service-bullets li{display:flex;gap:10px;align-items:flex-start;margin-bottom:10px;font-size:0.9rem;color:var(--dark)}
+.service-bullets li svg{color:var(--amber);flex-shrink:0;margin-top:3px}
+.price-badge{display:inline-flex;align-items:center;gap:8px;background:var(--off);border:1px solid var(--border);border-radius:8px;padding:12px 18px;font-size:0.88rem;font-weight:600;color:var(--dark)}
+.price-badge strong{color:var(--blue2)}
+.btn-primary{background:var(--amber);color:var(--ink);font-weight:800;font-family:'Raleway',sans-serif;font-size:1rem;padding:14px 28px;border-radius:6px;display:inline-flex;align-items:center;gap:10px;transition:all 0.2s;margin-top:20px}
+.btn-primary:hover{background:var(--amber2);transform:translateY(-1px)}
+/* CTA BAND */
+.cta-band{background:var(--blue2);padding:80px 24px;text-align:center}
+.cta-band-inner{max-width:700px;margin:0 auto}
+.cta-band h2{font-family:'Raleway',sans-serif;font-weight:900;font-size:clamp(1.8rem,4vw,3rem);color:var(--white);margin-bottom:16px}
+.cta-band p{color:rgba(255,255,255,0.8);font-size:1.05rem;margin-bottom:32px}
+.cta-band-phone{font-family:'Raleway',sans-serif;font-size:clamp(2.2rem,5vw,3.5rem);font-weight:900;color:var(--amber2);display:block;margin-bottom:8px}
+.cta-band-hours{font-size:0.9rem;color:rgba(255,255,255,0.65);margin-bottom:24px}
+/* FOOTER */
+footer{background:var(--ink);color:rgba(255,255,255,0.6);padding:60px 24px 32px}
+.footer-inner{max-width:1200px;margin:0 auto}
+.footer-top{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:48px;margin-bottom:48px}
+.footer-brand p{font-size:0.9rem;margin:16px 0 24px;line-height:1.7}
+.footer-col h4{font-family:'Raleway',sans-serif;font-weight:800;font-size:0.85rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--white);margin-bottom:16px}
+.footer-col a{display:block;font-size:0.88rem;color:rgba(255,255,255,0.55);margin-bottom:10px;transition:color 0.2s}
+.footer-col a:hover{color:var(--amber2)}
+.footer-bottom{border-top:1px solid rgba(255,255,255,0.08);padding-top:24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;font-size:0.82rem}
+/* REVEAL */
+.reveal,.rl,.rr{opacity:0;transition:opacity 0.7s ease,transform 0.7s ease}
+.reveal{transform:translateY(28px)}.rl{transform:translateX(-40px)}.rr{transform:translateX(40px)}
+.reveal.in,.rl.in,.rr.in{opacity:1;transform:none}
+.d1{transition-delay:0.1s}.d2{transition-delay:0.2s}
+@media(max-width:1024px){.service-block{grid-template-columns:1fr}.service-block.flip{direction:ltr}.footer-top{grid-template-columns:1fr 1fr}}
+@media(max-width:768px){.nav-links,.nav-cta{display:none}.hamburger{display:flex}.mobile-menu.open{display:flex}.footer-top{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+  <symbol id="i-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.72A2 2 0 012 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></symbol>
+  <symbol id="i-wrench" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></symbol>
+</svg>
+
+<div class="topbar"><div class="topbar-inner"><div class="topbar-left"><span><svg width="14" height="14"><use href="#i-pin"/></svg> West Yarmouth, MA</span><span><svg width="14" height="14"><use href="#i-clock"/></svg> Mon–Sat 8am–6pm</span></div><a href="tel:7742092270" class="topbar-cta"><svg width="14" height="14"><use href="#i-phone"/></svg> (774) 209-2270</a></div></div>
+
+<nav><div class="nav-inner">
+  <a href="index.html" class="logo"><div class="logo-mark"><svg width="22" height="22" fill="none" stroke="#fff" stroke-width="2" viewBox="0 0 24 24"><use href="#i-wrench"/></svg></div><div class="logo-text"><span class="logo-name">RDP Auto</span><span class="logo-sub">& Small Engine • Cape Cod</span></div></a>
+  <div class="nav-links"><a href="index.html">Home</a><a href="services.html" class="active">Services</a><a href="pricing.html">Pricing</a><a href="service-area.html">Service Area</a><a href="contact.html">Contact</a></div>
+  <a href="tel:7742092270" class="nav-cta"><svg width="16" height="16"><use href="#i-phone"/></svg> Call Now</a>
+  <div class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></div>
+</div></nav>
+<div class="mobile-menu" id="mobileMenu"><a href="index.html">Home</a><a href="services.html">Services</a><a href="pricing.html">Pricing</a><a href="service-area.html">Service Area</a><a href="contact.html">Contact</a><a href="tel:7742092270" class="nav-cta"><svg width="16" height="16"><use href="#i-phone"/></svg> (774) 209-2270</a></div>
+
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <div class="page-hero-tag">Our Services</div>
+    <h1>Everything We Fix — At Your Location</h1>
+    <p>From oil changes to welding, auto diagnostics to small engine tune-ups — RDP Auto brings professional-grade repair services right to your door across Cape Cod.</p>
+  </div>
+</div>
+
+<section class="section">
+  <div class="section-inner">
+
+    <!-- AUTO REPAIR -->
+    <div class="service-block">
+      <div class="service-img rl">
+        <img src="https://images.unsplash.com/photo-1625047509248-ec889cbff17f?w=800&q=85" alt="Mobile auto repair Cape Cod"/>
+      </div>
+      <div class="service-content rr">
+        <span class="tag">Automotive</span>
+        <h2>Auto Repair — All Makes &amp; Models</h2>
+        <p>We service most cars, trucks, SUVs, and light duty vehicles — foreign and domestic, old and new. No shop drop-off, no tow truck. We come to you and handle the repair on-site.</p>
+        <ul class="service-bullets">
+          <li><svg width="16" height="16"><use href="#i-check"/></svg> Engine diagnosis and repair</li>
+          <li><svg width="16" height="16"><use href="#i-check"/></svg> Transmission service</li>
+          <li><svg width="16" height="16"><use href="#i-check"/></svg> Cooling system (radiator, hoses, thermostat)</li>
+          <li><svg width="16" height="16"><use href="#i-check"/></svg> Suspension and steering</li>
+          <li><svg width="16" height="16"><use href="#i-check"/></svg> Exhaust and emissions</li>
+          <li><svg width="16" height="16"><use href="#i-check"/></svg> All makes — domestic and import</li>
+        </ul>
+        <div class="price-badge"><strong>$115/hr</strong> mobile + travel</div>
+        <a href="contact.html" class="btn-primary">Book Auto Repair <svg width="18" height="18"><use href="#i-arrow"/></svg></a>
+      </div>
+    </div>
+
+    <!-- OIL CHANGE -->
+    <div class="service-block flip">
+      <div class="service-img rr">
+        <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&q=85" alt="Oil change and maintenance Cape Cod"/>
+      </div>
+      <div class="service-content rl">
+        <span class="tag">Maintenance</span>
+        <h2>Oil Changes &amp; Routine Maintenance</h2>
+        <p>Regular maintenance is the best way to prevent expensive repairs down the road. We handle all routine service at your location — no appointment center, no wait in line, just a reliable mechanic at your door.</p>
+        <ul class="service-bullets">
+          <li><svg width="16" height="16"><use href="#i-check"/></svg> Full oil change (5 qts of oil + filter included)</li>
+          <li><svg width="16" height="16"><use href="#i-check"/></svg> Fluid top-offs and inspection</li>
+          <li><svg width="16" height="16"><use href="#i-check"/></svg> Air filter inspection and replacement</li>
+          <li><svg width="16" height="16"><use href="#i-check"/></svg> Belt and hose inspection</li>
+          <li><svg width="16" height="16"><use href="#i-check"/></svg> Battery check and clean</li>
+          <li><svg width="16" height="16"><use href="#i-check"/></svg> Tire pressure and rotation</li>
+        </ul>
+        <div class="price-badge"><strong>$90</strong> autos &nbsp;|&nbsp; <strong>$115</strong> trucks &nbsp;|&nbsp; HD trucks: call</div>
+        <a href="contact.html" class="btn-primary">Book Oil Change <svg width="18" height="18"><use href="#i-arrow"/></svg></a>
+      </div>
+    </div>
+
+    <!-- BRAKES -->
+    <div class="service-block">
+      <div class="service-img rl">
+        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=85" alt="Brake repair Cape Cod mobile mechanic"/>
+      </div>
+      <div class="service-content rr">
+        <span class="tag">Safety</span>
+        <h2>Brake Repair &amp; Replacement</h2>
+        <p>Brakes are your most important safety system. We replace pads, rotors, calipers, and brake lines on-site with OEM-quality parts. No inflated shop prices — honest quotes before we start.</p>
+        <ul class="service-bullets">
+          <li><svg width="16" height="16"><use href="#i-check"/></svg> Brake pad replacement</li>
+          <li><svg width="16" height="16"><use href="#i-check"/></svg> Rotor resurfacing or replacement</li>
+          <li><svg width="16" height="16"><use href="#i-check"/></svg> Caliper service and replacement</li>
+          <li><svg width="16" height="16"><use href="#i-check"/></svg> Brake line repair</li>
+          <li><svg width="16" height="16"><use href="#i-check"/></svg> Brake fluid flush</li>
+          <li><svg width="16" height="16"><use href="#i-check"/></svg> ABS diagnostics</li>
+        </ul>
+        <div class="price-badge"><strong>Pads: $100/axle</strong> cars &nbsp;|&nbsp; <strong>$120</strong> trucks &nbsp;|&nbsp; Pads+Rotors from <strong>$125</strong></div>
+        <a href="contact.html" class="btn-primary">Book Brake Service <svg width="18" height="18"><use href="#i-arrow"/></svg></a>
+      </div>
+    </div>
+
+    <!-- DIAGNOSTICS -->
+    <div class="service-block flip">
+      <div class="service-img rr">
+        <img src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?w=800&q=85" alt="Auto diagnostic testing Cape Cod"/>
+      </div>
+      <div class="service-content rl">
+        <span class="tag">Diagnostics</span>
+        <h2>Mobile Diagnostic Testing</h2>
+        <p>Check engine light on? Strange noise? Don't know what's wrong? We bring professional-grade diagnostic equipment to your location, scan every system, and explain exactly what's happening in plain English.</p>
+        <ul class="service-bullets">
+          <li><svg width="16" height="16"><use href="#i-check"/></svg> OBD-II / check engine light scanning</li>
+          <li><svg width="16" height="16"><use href="#i-check"/></svg> Live data monitoring of all vehicle systems</li>
+          <li><svg width="16" height="16"><use href="#i-check"/></svg> Electrical fault diagnosis</li>
+          <li><svg width="16" height="16"><use href="#i-check"/></svg> Sensor testing (O2, MAF, MAP, etc.)</li>
+          <li><svg width="16" height="16"><use href="#i-check"/></svg> Pre-purchase inspection</li>
+          <li><svg width="16" height="16"><use href="#i-check"/></svg> Post-repair verification</li>
+        </ul>
+        <div class="price-badge"><strong>$100 callout</strong> then <strong>$50/hr</strong></div>
+        <a href="contact.html" class="btn-primary">Book Diagnostic <svg width="18" height="18"><use href="#i-arrow"/></svg></a>
+      </div>
+    </div>
+
+    <!-- HD TRUCKS -->
+    <div class="service-block">
+      <div class="service-img rl">
+        <img src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=800&q=85" alt="Medium and heavy duty truck repair"/>
+      </div>
+      <div class="service-content rr">
+        <span class="tag">Commercial</span>
+        <h2>Medium &amp; Heavy Duty Truck Service</h2>
+        <p>We work on medium duty and heavy duty trucks — not just passenger vehicles. If your work truck is down, every hour costs you money. We come to your yard, job site, or wherever you're stuck.</p>
+        <ul class="service-bullets">
+          <li><svg width="16" height="16"><use href="#i-check"/></svg> Medium duty truck repair (Class 4–6)</li>
+          <li><svg width="16" height="16"><use href="#i-check"/></svg> HD truck service (Class 7–8, call for pricing)</li>
+          <li><svg width="16" height="16"><use href="#i-check"/></svg> Fleet maintenance agreements available</li>
+          <li><svg width="16" height="16"><use href="#i-check"/></svg> On-site at your business or job site</li>
+          <li><svg width="16" height="16"><use href="#i-check"/></svg> Faster turnaround than commercial shops</li>
+        </ul>
+        <div class="price-badge"><strong>$140/hr</strong> medium duty + travel &nbsp;|&nbsp; HD: call for pricing</div>
+        <a href="contact.html" class="btn-primary">Get a Truck Quote <svg width="18" height="18"><use href="#i-arrow"/></svg></a>
+      </div>
+    </div>
+
+    <!-- SMALL ENGINE -->
+    <div class="service-block flip">
+      <div class="service-img rr">
+        <img src="https://images.unsplash.com/photo-1544724569-5f546fd6f2b5?w=800&q=85" alt="Small engine repair mowers trimmers Cape Cod"/>
+      </div>
+      <div class="service-content rl">
+        <span class="tag">Equipment</span>
+        <h2>Small Engine &amp; Equipment Repair</h2>
+        <p>Push mowers, riding mowers, zero-turn mowers, string trimmers, chainsaws, leaf blowers, and more. We handle residential and commercial equipment — serviced at your home or business.</p>
+        <ul class="service-bullets">
+          <li><svg width="16" height="16"><use href="#i-check"/></svg> Push/self-propelled mower service ($80)</li>
+          <li><svg width="16" height="16"><use href="#i-check"/></svg> Riding mower &amp; lawn tractor ($200+)</li>
+          <li><svg width="16" height="16"><use href="#i-check"/></svg> Zero-turn mower service ($225)</li>
+          <li><svg width="16" height="16"><use href="#i-check"/></svg> String trimmers, blowers, chainsaws</li>
+          <li><svg width="16" height="16"><use href="#i-check"/></svg> Commercial-grade equipment from $250</li>
+          <li><svg width="16" height="16"><use href="#i-check"/></svg> Powersports (ATVs, dirt bikes, etc.)</li>
+        </ul>
+        <div class="price-badge">Residential from <strong>$60</strong> &nbsp;|&nbsp; Commercial from <strong>$70</strong> &nbsp;|&nbsp; Parts extra</div>
+        <a href="pricing.html" class="btn-primary">View Full Pricing <svg width="18" height="18"><use href="#i-arrow"/></svg></a>
+      </div>
+    </div>
+
+    <!-- WELDING -->
+    <div class="service-block">
+      <div class="service-img rl">
+        <img src="https://images.unsplash.com/photo-1504222490345-c075b7f5e18c?w=800&q=85" alt="On-site welding fabrication Cape Cod"/>
+      </div>
+      <div class="service-content rr">
+        <span class="tag">Fabrication</span>
+        <h2>On-Site Welding &amp; Fabrication</h2>
+        <p>Need a weld done at your property? We bring the equipment to you. Trailer repairs, custom brackets, exhaust work, equipment frames — if it needs a weld, we can do it on-site without a shop visit.</p>
+        <ul class="service-bullets">
+          <li><svg width="16" height="16"><use href="#i-check"/></svg> Trailer frame and hitch repair</li>
+          <li><svg width="16" height="16"><use href="#i-check"/></svg> Exhaust system fabrication and repair</li>
+          <li><svg width="16" height="16"><use href="#i-check"/></svg> Custom brackets and mounting</li>
+          <li><svg width="16" height="16"><use href="#i-check"/></svg> Equipment frame repair</li>
+          <li><svg width="16" height="16"><use href="#i-check"/></svg> Structural welding</li>
+          <li><svg width="16" height="16"><use href="#i-check"/></svg> MIG, TIG, and stick available</li>
+        </ul>
+        <div class="price-badge"><strong>$140/hr</strong> + $35 minimum surcharge</div>
+        <a href="contact.html" class="btn-primary">Get a Welding Quote <svg width="18" height="18"><use href="#i-arrow"/></svg></a>
+      </div>
+    </div>
+
+    <!-- WIRING -->
+    <div class="service-block flip">
+      <div class="service-img rr">
+        <img src="https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?w=800&q=85" alt="Custom wiring electrical vehicle Cape Cod"/>
+      </div>
+      <div class="service-content rl">
+        <span class="tag">Electrical</span>
+        <h2>Custom Wiring &amp; Electrical Repair</h2>
+        <p>Electrical problems can be some of the most frustrating to diagnose and fix. We have the skills and tools to handle everything from a blown fuse to a full custom wiring build for specialty vehicles and equipment.</p>
+        <ul class="service-bullets">
+          <li><svg width="16" height="16"><use href="#i-check"/></svg> Automotive electrical diagnosis</li>
+          <li><svg width="16" height="16"><use href="#i-check"/></svg> Custom wiring harness builds</li>
+          <li><svg width="16" height="16"><use href="#i-check"/></svg> Trailer wiring and lighting</li>
+          <li><svg width="16" height="16"><use href="#i-check"/></svg> Accessory installation (lights, winches, etc.)</li>
+          <li><svg width="16" height="16"><use href="#i-check"/></svg> Short circuit and ground fault repair</li>
+          <li><svg width="16" height="16"><use href="#i-check"/></svg> Equipment electrical systems</li>
+        </ul>
+        <div class="price-badge">Billed at auto or equipment hourly rate</div>
+        <a href="contact.html" class="btn-primary">Book Electrical Service <svg width="18" height="18"><use href="#i-arrow"/></svg></a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="cta-band-inner">
+    <h2>Ready to Book Your Service?</h2>
+    <p>Call or text us anytime. We'll schedule a time that works for you across Cape Cod.</p>
+    <a href="tel:7742092270" class="cta-band-phone">(774) 209-2270</a>
+    <div class="cta-band-hours">Mon–Fri 8am–6pm &nbsp;|&nbsp; Sat 8am–4pm</div>
+    <a href="contact.html" class="btn-primary" style="display:inline-flex;background:var(--amber);color:var(--ink)">Schedule Online <svg width="18" height="18"><use href="#i-arrow"/></svg></a>
+  </div>
+</section>
+
+<footer><div class="footer-inner">
+  <div class="footer-top">
+    <div class="footer-brand"><div class="logo"><div class="logo-mark"><svg width="22" height="22" fill="none" stroke="#fff" stroke-width="2" viewBox="0 0 24 24"><use href="#i-wrench"/></svg></div><div class="logo-text"><span class="logo-name" style="color:white">RDP Auto</span><span class="logo-sub">& Small Engine</span></div></div><p>West Yarmouth's trusted mobile mechanic serving all of Cape Cod from Falmouth to Eastham.</p><div style="display:flex;gap:8px;align-items:center;font-size:0.85rem;color:rgba(255,255,255,0.5)"><svg width="14" height="14"><use href="#i-phone"/></svg> <a href="tel:7742092270" style="color:var(--amber2)">(774) 209-2270</a></div></div>
+    <div class="footer-col"><h4>Services</h4><a href="services.html">Auto Repair</a><a href="services.html">Oil Changes</a><a href="services.html">Brake Repair</a><a href="services.html">Diagnostics</a><a href="services.html">Small Engine</a><a href="services.html">Welding</a></div>
+    <div class="footer-col"><h4>Company</h4><a href="index.html">Home</a><a href="service-area.html">Service Area</a><a href="pricing.html">Pricing</a><a href="contact.html">Contact</a></div>
+    <div class="footer-col"><h4>Service Area</h4><a href="service-area.html">Falmouth</a><a href="service-area.html">Barnstable</a><a href="service-area.html">Hyannis</a><a href="service-area.html">Yarmouth</a><a href="service-area.html">Dennis</a><a href="service-area.html">Orleans</a></div>
+  </div>
+  <div class="footer-bottom"><span>© 2025 RDP Auto & Small Engine. West Yarmouth, MA.</span><span>Mobile mechanic serving Cape Cod, MA</span></div>
+</div></footer>
+
+<script>
+function toggleMenu(){document.getElementById('mobileMenu').classList.toggle('open')}
+const obs=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting)x.target.classList.add('in')})},{threshold:0.1});
+document.querySelectorAll('.reveal,.rl,.rr').forEach(el=>obs.observe(el));
+</script>
+</body>
+</html>
