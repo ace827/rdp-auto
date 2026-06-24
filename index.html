@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>RDP Auto & Small Engine | Mobile Mechanic — Cape Cod, MA</title>
+<meta name="description" content="West Yarmouth's trusted mobile mechanic. Auto repair, small engine service & welding across Cape Cod — we come to you. Call (774) 209-2270."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+<style>
+:root{
+  --ink:#0d1b2a;
+  --ink2:#122233;
+  --ink3:#1a2f42;
+  --blue:#1e6fbf;
+  --blue2:#2563eb;
+  --amber:#d97706;
+  --amber2:#f59e0b;
+  --off:#f8f9fb;
+  --warm:#eef2f7;
+  --border:#d0dae6;
+  --mid:#6b7e94;
+  --dark:#2d3f52;
+  --card:#f0f4f9;
+  --white:#ffffff;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;color:var(--dark);background:var(--white);line-height:1.6}
+h1,h2,h3,h4{font-family:'Raleway',sans-serif;line-height:1.15}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+
+/* TOPBAR */
+.topbar{background:var(--ink);color:#a8bdd0;font-size:0.8rem;padding:8px 0}
+.topbar-inner{max-width:1200px;margin:0 auto;padding:0 24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px}
+.topbar-left{display:flex;gap:20px;flex-wrap:wrap}
+.topbar-left span{display:flex;align-items:center;gap:6px}
+.topbar-cta{background:var(--amber);color:var(--ink);font-weight:700;font-size:0.8rem;padding:6px 16px;border-radius:4px;white-space:nowrap;display:flex;align-items:center;gap:6px;transition:background 0.2s}
+.topbar-cta:hover{background:var(--amber2)}
+
+/* NAV */
+nav{background:var(--white);border-bottom:2px solid var(--border);position:sticky;top:0;z-index:100;box-shadow:0 2px 12px rgba(13,27,42,0.08)}
+.nav-inner{max-width:1200px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:68px}
+.logo{display:flex;align-items:center;gap:12px}
+.logo-mark{width:40px;height:40px;background:var(--ink);border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.logo-text{display:flex;flex-direction:column}
+.logo-name{font-family:'Raleway',sans-serif;font-weight:900;font-size:1.1rem;color:var(--ink);line-height:1.1}
+.logo-sub{font-size:0.7rem;color:var(--mid);letter-spacing:0.05em;text-transform:uppercase}
+.nav-links{display:flex;align-items:center;gap:28px}
+.nav-links a{font-size:0.9rem;font-weight:600;color:var(--dark);letter-spacing:0.02em;transition:color 0.2s;position:relative;padding-bottom:4px}
+.nav-links a::after{content:'';position:absolute;bottom:0;left:0;width:0;height:2px;background:var(--amber);transition:width 0.2s}
+.nav-links a:hover,.nav-links a.active{color:var(--blue2)}
+.nav-links a:hover::after,.nav-links a.active::after{width:100%}
+.nav-cta{background:var(--blue2);color:var(--white);font-weight:700;font-size:0.85rem;padding:10px 22px;border-radius:6px;display:flex;align-items:center;gap:8px;transition:background 0.2s;white-space:nowrap}
+.nav-cta:hover{background:var(--ink)}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px}
+.hamburger span{width:24px;height:2px;background:var(--ink);border-radius:2px;transition:all 0.3s}
+.mobile-menu{display:none;position:fixed;top:68px;left:0;right:0;background:var(--white);border-bottom:2px solid var(--border);padding:20px 24px;z-index:99;flex-direction:column;gap:16px;box-shadow:0 8px 24px rgba(0,0,0,0.1)}
+.mobile-menu a{font-weight:600;color:var(--dark);font-size:1rem;padding:8px 0;border-bottom:1px solid var(--border)}
+.mobile-menu .nav-cta{margin-top:8px;justify-content:center;border:none}
+
+/* HERO */
+.hero{position:relative;min-height:100vh;display:flex;align-items:center;overflow:hidden}
+.hero-img{position:absolute;inset:0;background-image:url('https://images.unsplash.com/photo-1625047509248-ec889cbff17f?w=1920&q=85');background-size:cover;background-position:center}
+.hero-img::after{content:'';position:absolute;inset:0;background:linear-gradient(105deg,rgba(13,27,42,0.92) 0%,rgba(13,27,42,0.75) 55%,rgba(13,27,42,0.4) 100%)}
+.hero-content{position:relative;z-index:2;max-width:1200px;margin:0 auto;padding:100px 24px 60px;display:grid;grid-template-columns:1fr 380px;gap:60px;align-items:center;width:100%}
+.hero-tag{display:inline-flex;align-items:center;gap:8px;background:rgba(217,119,6,0.15);border:1px solid rgba(217,119,6,0.4);color:var(--amber2);font-size:0.8rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:6px 14px;border-radius:100px;margin-bottom:20px}
+.hero-tag-dot{width:6px;height:6px;background:var(--amber);border-radius:50%;animation:pulse 1.5s ease-in-out infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:0.3}}
+.hero h1{font-size:clamp(2.4rem,5vw,4rem);font-weight:900;color:var(--white);margin-bottom:20px;letter-spacing:-0.02em}
+.hero h1 span{color:var(--amber2)}
+.hero-sub{font-size:1.1rem;color:rgba(255,255,255,0.8);margin-bottom:36px;max-width:520px;font-weight:400;line-height:1.7}
+.hero-btns{display:flex;gap:16px;flex-wrap:wrap}
+.btn-primary{background:var(--amber);color:var(--ink);font-weight:800;font-family:'Raleway',sans-serif;font-size:1rem;padding:14px 28px;border-radius:6px;display:flex;align-items:center;gap:10px;transition:all 0.2s;border:none;cursor:pointer}
+.btn-primary:hover{background:var(--amber2);transform:translateY(-1px);box-shadow:0 6px 20px rgba(217,119,6,0.4)}
+.btn-secondary{background:transparent;color:var(--white);font-weight:700;font-family:'Raleway',sans-serif;font-size:1rem;padding:14px 28px;border-radius:6px;border:2px solid rgba(255,255,255,0.4);display:flex;align-items:center;gap:10px;transition:all 0.2s}
+.btn-secondary:hover{border-color:var(--white);background:rgba(255,255,255,0.1)}
+.hero-card{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);backdrop-filter:blur(12px);border-radius:16px;padding:32px;color:var(--white)}
+.hero-card h3{font-family:'Raleway',sans-serif;font-weight:800;font-size:1.1rem;margin-bottom:20px;padding-bottom:16px;border-bottom:1px solid rgba(255,255,255,0.1)}
+.hero-card-row{display:flex;gap:12px;margin-bottom:16px;align-items:flex-start}
+.hero-card-row svg{flex-shrink:0;margin-top:2px;color:var(--amber2)}
+.hero-card-row strong{display:block;font-size:0.75rem;text-transform:uppercase;letter-spacing:0.08em;color:var(--amber2);margin-bottom:2px;font-weight:700}
+.hero-card-row span{font-size:0.9rem;color:rgba(255,255,255,0.85);line-height:1.5}
+.hero-card-phone{margin-top:20px;padding-top:20px;border-top:1px solid rgba(255,255,255,0.1);text-align:center}
+.hero-card-phone a{font-family:'Raleway',sans-serif;font-size:1.5rem;font-weight:900;color:var(--amber2);display:block}
+.hero-card-phone small{font-size:0.75rem;color:rgba(255,255,255,0.5);margin-top:4px;display:block}
+
+/* STATS BAND */
+.stats{background:var(--amber);padding:50px 24px}
+.stats-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:2px}
+.stat{text-align:center;padding:20px}
+.stat-num{font-family:'Raleway',sans-serif;font-size:2.8rem;font-weight:900;color:var(--ink);line-height:1}
+.stat-label{font-size:0.85rem;font-weight:600;color:var(--ink);opacity:0.75;margin-top:6px;text-transform:uppercase;letter-spacing:0.05em}
+
+/* SECTION COMMON */
+.section{padding:90px 24px}
+.section-inner{max-width:1200px;margin:0 auto}
+.section-tag{display:inline-block;background:rgba(37,99,235,0.08);color:var(--blue2);font-size:0.75rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;padding:5px 14px;border-radius:100px;margin-bottom:14px;border:1px solid rgba(37,99,235,0.15)}
+.section-title{font-family:'Raleway',sans-serif;font-size:clamp(1.8rem,3.5vw,2.8rem);font-weight:900;color:var(--ink);margin-bottom:16px;letter-spacing:-0.02em}
+.section-sub{font-size:1.05rem;color:var(--mid);max-width:580px;line-height:1.75}
+.section-header{margin-bottom:56px}
+.section-header.center{text-align:center}
+.section-header.center .section-sub{margin:0 auto}
+
+/* HOW IT WORKS */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:32px}
+.step{text-align:center;padding:36px 24px;background:var(--off);border-radius:12px;border:1px solid var(--border);position:relative;transition:transform 0.2s,box-shadow 0.2s}
+.step:hover{transform:translateY(-4px);box-shadow:0 12px 32px rgba(13,27,42,0.1)}
+.step-num{width:56px;height:56px;background:var(--ink);color:var(--white);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Raleway',sans-serif;font-size:1.4rem;font-weight:900;margin:0 auto 20px}
+.step:not(:last-child)::after{content:'→';position:absolute;right:-20px;top:50%;transform:translateY(-50%);font-size:1.4rem;color:var(--border);font-weight:300}
+.step h3{font-family:'Raleway',sans-serif;font-weight:800;font-size:1.1rem;color:var(--ink);margin-bottom:10px}
+.step p{font-size:0.9rem;color:var(--mid);line-height:1.65}
+
+/* SERVICES GRID */
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.service-card{background:var(--white);border:1px solid var(--border);border-radius:14px;overflow:hidden;transition:transform 0.2s,box-shadow 0.2s;display:flex;flex-direction:column}
+.service-card:hover{transform:translateY(-5px);box-shadow:0 16px 40px rgba(13,27,42,0.12)}
+.service-card-img{height:200px;overflow:hidden;position:relative}
+.service-card-img img{width:100%;height:100%;object-fit:cover;transition:transform 0.4s}
+.service-card:hover .service-card-img img{transform:scale(1.05)}
+.service-card-body{padding:24px;flex:1;display:flex;flex-direction:column}
+.service-card-icon{width:44px;height:44px;background:rgba(37,99,235,0.08);border-radius:10px;display:flex;align-items:center;justify-content:center;color:var(--blue2);margin-bottom:14px}
+.service-card h3{font-family:'Raleway',sans-serif;font-weight:800;font-size:1.15rem;color:var(--ink);margin-bottom:10px}
+.service-card p{font-size:0.9rem;color:var(--mid);line-height:1.65;flex:1}
+.service-card-link{margin-top:16px;font-size:0.85rem;font-weight:700;color:var(--blue2);display:flex;align-items:center;gap:6px;transition:gap 0.2s}
+.service-card:hover .service-card-link{gap:10px}
+
+/* WHY US */
+.why{background:var(--ink);padding:90px 24px}
+.why-inner{max-width:1200px;margin:0 auto}
+.why-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+.why-col h3{font-family:'Raleway',sans-serif;font-weight:800;font-size:1.2rem;margin-bottom:24px;padding:14px 20px;border-radius:8px}
+.why-col.bad h3{color:#ef4444;background:rgba(239,68,68,0.1);border:1px solid rgba(239,68,68,0.2)}
+.why-col.good h3{color:#22c55e;background:rgba(34,197,94,0.1);border:1px solid rgba(34,197,94,0.2)}
+.why-item{display:flex;gap:14px;margin-bottom:18px;align-items:flex-start}
+.why-icon{width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px}
+.why-col.bad .why-icon{background:rgba(239,68,68,0.12);color:#ef4444}
+.why-col.good .why-icon{background:rgba(34,197,94,0.12);color:#22c55e}
+.why-item-text strong{display:block;color:var(--white);font-size:0.95rem;margin-bottom:4px}
+.why-item-text span{font-size:0.85rem;color:rgba(255,255,255,0.5);line-height:1.6}
+
+/* ABOUT STRIP */
+.about-strip{background:var(--off);padding:90px 24px}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;max-width:1200px;margin:0 auto}
+.about-img-wrap{position:relative}
+.about-img-main{border-radius:16px;overflow:hidden;height:460px}
+.about-img-main img{width:100%;height:100%;object-fit:cover}
+.about-badge{position:absolute;bottom:-20px;right:-20px;background:var(--amber);color:var(--ink);border-radius:12px;padding:20px 24px;text-align:center;box-shadow:0 8px 24px rgba(217,119,6,0.3)}
+.about-badge-num{font-family:'Raleway',sans-serif;font-size:2rem;font-weight:900;line-height:1}
+.about-badge-label{font-size:0.75rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;margin-top:4px}
+.about-points{list-style:none;margin:28px 0}
+.about-points li{display:flex;gap:12px;align-items:flex-start;margin-bottom:14px;font-size:0.95rem;color:var(--dark)}
+.about-points li svg{color:var(--amber);flex-shrink:0;margin-top:2px}
+
+/* REVIEWS */
+.reviews{background:var(--ink2);padding:90px 24px}
+.reviews-inner{max-width:1200px;margin:0 auto}
+.reviews-pull{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:16px;padding:48px;margin-bottom:48px;position:relative}
+.reviews-pull::before{content:'\201C';font-family:'Raleway',sans-serif;font-size:8rem;line-height:0.6;color:var(--amber);position:absolute;top:32px;left:40px;opacity:0.3}
+.reviews-pull-text{font-size:1.4rem;color:var(--white);font-style:italic;line-height:1.7;position:relative;z-index:1}
+.reviews-pull-author{margin-top:24px;font-size:0.9rem;color:var(--amber2);font-weight:700}
+.stars{display:flex;gap:3px;color:var(--amber);margin-bottom:16px}
+.reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.review-card{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:12px;padding:24px}
+.review-card p{font-size:0.9rem;color:rgba(255,255,255,0.75);line-height:1.7;margin-bottom:16px}
+.reviewer{font-size:0.85rem;font-weight:700;color:var(--white)}
+.reviewer-loc{font-size:0.8rem;color:var(--mid);margin-top:2px}
+
+/* CTA BAND */
+.cta-band{background:var(--blue2);padding:80px 24px;text-align:center}
+.cta-band-inner{max-width:700px;margin:0 auto}
+.cta-band h2{font-family:'Raleway',sans-serif;font-weight:900;font-size:clamp(1.8rem,4vw,3rem);color:var(--white);margin-bottom:16px}
+.cta-band p{color:rgba(255,255,255,0.8);font-size:1.05rem;margin-bottom:36px}
+.cta-band-phone{font-family:'Raleway',sans-serif;font-size:clamp(2.2rem,5vw,3.5rem);font-weight:900;color:var(--amber2);display:block;margin-bottom:8px}
+.cta-band-hours{font-size:0.9rem;color:rgba(255,255,255,0.65);margin-bottom:32px}
+.cta-band-btns{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+
+/* FAQ */
+.faq{padding:90px 24px;background:var(--white)}
+.faq-inner{max-width:800px;margin:0 auto}
+.faq-item{border-bottom:1px solid var(--border)}
+.faq-q{width:100%;display:flex;justify-content:space-between;align-items:center;padding:22px 0;cursor:pointer;background:none;border:none;text-align:left;gap:16px}
+.faq-q-text{font-family:'Raleway',sans-serif;font-weight:700;font-size:1.05rem;color:var(--ink)}
+.faq-icon{flex-shrink:0;width:28px;height:28px;background:var(--off);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--blue2);transition:transform 0.3s}
+.faq-item.open .faq-icon{transform:rotate(180deg);background:var(--blue2);color:var(--white)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height 0.35s ease}
+.faq-item.open .faq-a{max-height:300px}
+.faq-a p{padding:0 0 22px;font-size:0.95rem;color:var(--mid);line-height:1.75}
+
+/* FOOTER */
+footer{background:var(--ink);color:rgba(255,255,255,0.6);padding:60px 24px 32px}
+.footer-inner{max-width:1200px;margin:0 auto}
+.footer-top{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:48px;margin-bottom:48px}
+.footer-brand p{font-size:0.9rem;margin:16px 0 24px;line-height:1.7}
+.footer-social{display:flex;gap:12px}
+.social-btn{width:36px;height:36px;background:rgba(255,255,255,0.08);border-radius:8px;display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,0.6);transition:all 0.2s}
+.social-btn:hover{background:var(--amber);color:var(--ink)}
+.footer-col h4{font-family:'Raleway',sans-serif;font-weight:800;font-size:0.85rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--white);margin-bottom:16px}
+.footer-col a{display:block;font-size:0.88rem;color:rgba(255,255,255,0.55);margin-bottom:10px;transition:color 0.2s}
+.footer-col a:hover{color:var(--amber2)}
+.footer-bottom{border-top:1px solid rgba(255,255,255,0.08);padding-top:24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;font-size:0.82rem}
+.footer-bottom a{color:rgba(255,255,255,0.4);transition:color 0.2s}
+.footer-bottom a:hover{color:var(--amber2)}
+
+/* ANIMATIONS */
+.reveal,.rl,.rr{opacity:0;transition:opacity 0.7s ease,transform 0.7s ease}
+.reveal{transform:translateY(28px)}
+.rl{transform:translateX(-40px)}
+.rr{transform:translateX(40px)}
+.reveal.in,.rl.in,.rr.in{opacity:1;transform:none}
+.d1{transition-delay:0.1s}.d2{transition-delay:0.2s}.d3{transition-delay:0.3s}.d4{transition-delay:0.4s}
+
+/* RESPONSIVE */
+@media(max-width:1024px){
+  .hero-content{grid-template-columns:1fr}
+  .hero-card{display:none}
+  .steps{grid-template-columns:repeat(2,1fr)}
+  .step::after{display:none}
+  .services-grid{grid-template-columns:repeat(2,1fr)}
+  .footer-top{grid-template-columns:1fr 1fr}
+}
+@media(max-width:768px){
+  .topbar-left{gap:12px}
+  .nav-links,.nav-cta{display:none}
+  .hamburger{display:flex}
+  .mobile-menu.open{display:flex}
+  .stats-inner{grid-template-columns:repeat(2,1fr)}
+  .steps{grid-template-columns:1fr}
+  .services-grid{grid-template-columns:1fr}
+  .why-grid{grid-template-columns:1fr}
+  .about-grid{grid-template-columns:1fr}
+  .about-badge{position:static;margin-top:24px;display:inline-flex;gap:12px;align-items:center}
+  .reviews-grid{grid-template-columns:1fr}
+  .footer-top{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<!-- SVG SPRITE -->
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+  <symbol id="i-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.72A2 2 0 012 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></symbol>
+  <symbol id="i-wrench" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></symbol>
+  <symbol id="i-chevron-down" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></symbol>
+  <symbol id="i-oil" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12V6a2 2 0 012-2h10a2 2 0 012 2v6"/><ellipse cx="12" cy="17" rx="7" ry="5"/><path d="M8 12h8"/></symbol>
+  <symbol id="i-brake" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/><path d="M12 8V4M16 12h4M12 16v4M8 12H4"/></symbol>
+  <symbol id="i-engine" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="12" rx="2"/><path d="M6 7V5M10 7V5M16 7V5M6 19v2M10 19v2M16 19v2"/><path d="M2 13h20"/></symbol>
+  <symbol id="i-battery" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="16" height="10" rx="2"/><path d="M22 11v2M9 11V9M9 13v2M13 9v6"/></symbol>
+  <symbol id="i-bolt" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></symbol>
+  <symbol id="i-tool2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.121 14.121L18.364 18.364m-14.243 0L8.364 14.121M12 8a4 4 0 100-8 4 4 0 000 8z"/></symbol>
+  <symbol id="i-truck" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></symbol>
+  <symbol id="i-flame" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0011 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 01-7 7 7 7 0 01-3.5-.9"/></symbol>
+  <symbol id="i-mower" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="10" width="14" height="7" rx="2"/><circle cx="6" cy="20" r="2"/><circle cx="12" cy="20" r="2"/><path d="M16 12h4a2 2 0 010 4h-4M8 10V7a3 3 0 016 0v3"/></symbol>
+</svg>
+
+<!-- TOPBAR -->
+<div class="topbar">
+  <div class="topbar-inner">
+    <div class="topbar-left">
+      <span><svg width="14" height="14"><use href="#i-pin"/></svg> West Yarmouth, MA — Cape Cod</span>
+      <span><svg width="14" height="14"><use href="#i-clock"/></svg> Mon–Sat 8am–6pm</span>
+    </div>
+    <a href="tel:7742092270" class="topbar-cta"><svg width="14" height="14"><use href="#i-phone"/></svg> (774) 209-2270</a>
+  </div>
+</div>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="logo">
+      <div class="logo-mark">
+        <svg width="22" height="22" fill="none" stroke="#fff" stroke-width="2" viewBox="0 0 24 24"><use href="#i-wrench"/></svg>
+      </div>
+      <div class="logo-text">
+        <span class="logo-name">RDP Auto</span>
+        <span class="logo-sub">& Small Engine • Cape Cod</span>
+      </div>
+    </a>
+    <div class="nav-links">
+      <a href="index.html" class="active">Home</a>
+      <a href="services.html">Services</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="service-area.html">Service Area</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <a href="tel:7742092270" class="nav-cta"><svg width="16" height="16"><use href="#i-phone"/></svg> Call Now</a>
+    <div class="hamburger" id="ham" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html">Home</a>
+  <a href="services.html">Services</a>
+  <a href="pricing.html">Pricing</a>
+  <a href="service-area.html">Service Area</a>
+  <a href="contact.html">Contact</a>
+  <a href="tel:7742092270" class="nav-cta"><svg width="16" height="16"><use href="#i-phone"/></svg> (774) 209-2270</a>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-img"></div>
+  <div class="hero-content">
+    <div class="hero-left">
+      <div class="hero-tag"><span class="hero-tag-dot"></span> Mobile Mechanic — We Come to You</div>
+      <h1>Cape Cod's Trusted<br/><span>Mobile Auto &amp;<br/>Equipment Shop</span></h1>
+      <p class="hero-sub">From Falmouth to Eastham — we bring expert repairs right to your driveway, job site, or wherever you are. Cars, trucks, powersports &amp; small engines.</p>
+      <div class="hero-btns">
+        <a href="contact.html" class="btn-primary"><svg width="18" height="18"><use href="#i-phone"/></svg> Get Service Today</a>
+        <a href="services.html" class="btn-secondary"><svg width="18" height="18"><use href="#i-arrow"/></svg> View All Services</a>
+      </div>
+    </div>
+    <div class="hero-card">
+      <h3>Contact Us</h3>
+      <div class="hero-card-row">
+        <svg width="18" height="18"><use href="#i-pin"/></svg>
+        <div><strong>Location</strong><span>West Yarmouth, MA<br/>Serving all of Cape Cod</span></div>
+      </div>
+      <div class="hero-card-row">
+        <svg width="18" height="18"><use href="#i-clock"/></svg>
+        <div><strong>Hours</strong><span>Mon–Fri: 8am – 6pm<br/>Sat: 8am – 4pm</span></div>
+      </div>
+      <div class="hero-card-row">
+        <svg width="18" height="18"><use href="#i-wrench"/></svg>
+        <div><strong>Services</strong><span>Auto, Equipment,<br/>Small Engine &amp; Welding</span></div>
+      </div>
+      <div class="hero-card-phone">
+        <small>Call or Text</small>
+        <a href="tel:7742092270">(774) 209-2270</a>
+        <small>Response within the hour</small>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="stats">
+  <div class="stats-inner">
+    <div class="stat reveal"><div class="stat-num" data-count="5">5</div><div class="stat-label">Star Rated</div></div>
+    <div class="stat reveal d1"><div class="stat-num">All Makes</div><div class="stat-label">&amp; Models</div></div>
+    <div class="stat reveal d2"><div class="stat-num">Falmouth</div><div class="stat-label">to Eastham</div></div>
+    <div class="stat reveal d3"><div class="stat-num">100%</div><div class="stat-label">Honest Pricing</div></div>
+  </div>
+</div>
+
+<!-- HOW IT WORKS -->
+<section class="section">
+  <div class="section-inner">
+    <div class="section-header center">
+      <span class="section-tag">Simple Process</span>
+      <h2 class="section-title">How It Works</h2>
+      <p class="section-sub">Getting your vehicle or equipment fixed couldn't be easier. We handle everything — no towing, no waiting rooms, no hassle.</p>
+    </div>
+    <div class="steps">
+      <div class="step reveal"><div class="step-num">1</div><h3>Call or Text</h3><p>Reach us at (774) 209-2270. Describe what's going on and we'll schedule a convenient time for you.</p></div>
+      <div class="step reveal d1"><div class="step-num">2</div><h3>We Come to You</h3><p>Our mobile unit arrives at your home, workplace, or wherever your vehicle is located across Cape Cod.</p></div>
+      <div class="step reveal d2"><div class="step-num">3</div><h3>Diagnose &amp; Quote</h3><p>We run a full diagnostic, identify the problem, and give you a clear upfront quote — no surprises.</p></div>
+      <div class="step reveal d3"><div class="step-num">4</div><h3>Back on the Road</h3><p>We complete the repair on-site. You approve everything before work starts. Pay when it's done.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES PREVIEW -->
+<section class="section" style="background:var(--off);padding-top:0">
+  <div class="section-inner">
+    <div class="section-header" style="padding-top:90px">
+      <span class="section-tag">What We Fix</span>
+      <h2 class="section-title">Our Core Services</h2>
+      <p class="section-sub">From routine maintenance to complex repairs — cars, trucks, powersports, and small engine equipment. <a href="services.html" style="color:var(--blue2);font-weight:600">View all services →</a></p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card reveal">
+        <div class="service-card-img">
+          <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=600&q=80" alt="Oil change service"/>
+        </div>
+        <div class="service-card-body">
+          <div class="service-card-icon"><svg width="22" height="22"><use href="#i-oil"/></svg></div>
+          <h3>Oil Changes &amp; Maintenance</h3>
+          <p>Full oil change with filter replacement, fluid top-offs, and a vehicle inspection. Starting at $90 for autos.</p>
+          <a href="services.html" class="service-card-link">Learn more <svg width="14" height="14"><use href="#i-arrow"/></svg></a>
+        </div>
+      </div>
+      <div class="service-card reveal d1">
+        <div class="service-card-img">
+          <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80" alt="Brake repair"/>
+        </div>
+        <div class="service-card-body">
+          <div class="service-card-icon"><svg width="22" height="22"><use href="#i-brake"/></svg></div>
+          <h3>Brake Repair</h3>
+          <p>Pads, rotors, calipers — all vehicles. We don't upsell parts you don't need. Starting at $100/axle.</p>
+          <a href="services.html" class="service-card-link">Learn more <svg width="14" height="14"><use href="#i-arrow"/></svg></a>
+        </div>
+      </div>
+      <div class="service-card reveal d2">
+        <div class="service-card-img">
+          <img src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?w=600&q=80" alt="Diagnostic testing"/>
+        </div>
+        <div class="service-card-body">
+          <div class="service-card-icon"><svg width="22" height="22"><use href="#i-engine"/></svg></div>
+          <h3>Diagnostics &amp; Engine Repair</h3>
+          <p>Mobile diagnostic callout ($100), then $50/hr. We identify problems fast and explain everything clearly.</p>
+          <a href="services.html" class="service-card-link">Learn more <svg width="14" height="14"><use href="#i-arrow"/></svg></a>
+        </div>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-card-img">
+          <img src="https://images.unsplash.com/photo-1544724569-5f546fd6f2b5?w=600&q=80" alt="Small engine repair"/>
+        </div>
+        <div class="service-card-body">
+          <div class="service-card-icon"><svg width="22" height="22"><use href="#i-mower"/></svg></div>
+          <h3>Small Engine &amp; Equipment</h3>
+          <p>Mowers, trimmers, chainsaws, and more. Residential from $60, commercial from $70. Parts extra.</p>
+          <a href="services.html" class="service-card-link">Learn more <svg width="14" height="14"><use href="#i-arrow"/></svg></a>
+        </div>
+      </div>
+      <div class="service-card reveal d1">
+        <div class="service-card-img">
+          <img src="https://images.unsplash.com/photo-1504222490345-c075b7f5e18c?w=600&q=80" alt="Welding and fabrication"/>
+        </div>
+        <div class="service-card-body">
+          <div class="service-card-icon"><svg width="22" height="22"><use href="#i-flame"/></svg></div>
+          <h3>Welding &amp; Fabrication</h3>
+          <p>On-site welding and custom fabrication. $140/hr plus a $35 minimum surcharge. Available at your location.</p>
+          <a href="services.html" class="service-card-link">Learn more <svg width="14" height="14"><use href="#i-arrow"/></svg></a>
+        </div>
+      </div>
+      <div class="service-card reveal d2">
+        <div class="service-card-img">
+          <img src="https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?w=600&q=80" alt="Custom wiring"/>
+        </div>
+        <div class="service-card-body">
+          <div class="service-card-icon"><svg width="22" height="22"><use href="#i-bolt"/></svg></div>
+          <h3>Custom Wiring &amp; Electrical</h3>
+          <p>Custom wiring builds, wiring repairs, and electrical diagnostics for vehicles and equipment of all types.</p>
+          <a href="services.html" class="service-card-link">Learn more <svg width="14" height="14"><use href="#i-arrow"/></svg></a>
+        </div>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:48px">
+      <a href="services.html" class="btn-primary" style="display:inline-flex">View All Services <svg width="18" height="18"><use href="#i-arrow"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<!-- WHY INDEPENDENT -->
+<section class="why">
+  <div class="why-inner">
+    <div class="section-header center" style="margin-bottom:48px">
+      <span class="section-tag" style="background:rgba(217,119,6,0.15);color:var(--amber2);border-color:rgba(217,119,6,0.3)">Why Mobile?</span>
+      <h2 class="section-title" style="color:var(--white)">RDP Auto vs. Big Shops</h2>
+      <p class="section-sub" style="color:rgba(255,255,255,0.6);margin:0 auto">Skip the dealership drama. Here's what makes a mobile, local mechanic the smarter choice.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-col bad">
+        <h3><svg width="18" height="18" style="display:inline;vertical-align:middle;margin-right:8px"><use href="#i-x"/></svg> Dealerships &amp; Chain Shops</h3>
+        <div class="why-item"><div class="why-icon"><svg width="14" height="14"><use href="#i-x"/></svg></div><div class="why-item-text"><strong>You wait for hours in a waiting room</strong><span>Drop off your car and lose your whole day — or pay for a loaner.</span></div></div>
+        <div class="why-item"><div class="why-icon"><svg width="14" height="14"><use href="#i-x"/></svg></div><div class="why-item-text"><strong>Inflated labor rates &amp; markups</strong><span>Dealerships charge premium rates with unnecessary upsells on every visit.</span></div></div>
+        <div class="why-item"><div class="why-icon"><svg width="14" height="14"><use href="#i-x"/></svg></div><div class="why-item-text"><strong>Only work on certain makes</strong><span>Specialty shops turn away vehicles that don't fit their narrow niche.</span></div></div>
+        <div class="why-item"><div class="why-icon"><svg width="14" height="14"><use href="#i-x"/></svg></div><div class="why-item-text"><strong>No equipment or small engine service</strong><span>Your lawnmower, chainsaw, or ATV? They won't touch it.</span></div></div>
+      </div>
+      <div class="why-col good">
+        <h3><svg width="18" height="18" style="display:inline;vertical-align:middle;margin-right:8px"><use href="#i-check"/></svg> RDP Auto &amp; Small Engine</h3>
+        <div class="why-item"><div class="why-icon"><svg width="14" height="14"><use href="#i-check"/></svg></div><div class="why-item-text"><strong>We come to you — zero wait time</strong><span>Work from home, stay at your job site. Your car gets fixed while you live your life.</span></div></div>
+        <div class="why-item"><div class="why-icon"><svg width="14" height="14"><use href="#i-check"/></svg></div><div class="why-item-text"><strong>Honest, transparent pricing</strong><span>You get a clear quote before any work starts. No surprise charges at pickup.</span></div></div>
+        <div class="why-item"><div class="why-icon"><svg width="14" height="14"><use href="#i-check"/></svg></div><div class="why-item-text"><strong>All makes, models &amp; HD trucks</strong><span>Cars, trucks, SUVs, medium duty and heavy duty — we handle everything.</span></div></div>
+        <div class="why-item"><div class="why-icon"><svg width="14" height="14"><use href="#i-check"/></svg></div><div class="why-item-text"><strong>Auto + equipment + small engines</strong><span>One call covers your entire property — vehicles, mowers, powersports &amp; more.</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about-strip">
+  <div class="about-grid">
+    <div class="rl">
+      <div class="about-img-main">
+        <img src="https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?w=800&q=85" alt="RDP Auto mobile mechanic at work on Cape Cod"/>
+      </div>
+      <div class="about-badge">
+        <div><div class="about-badge-num">Local</div><div class="about-badge-label">Owner Operated</div></div>
+      </div>
+    </div>
+    <div class="rr">
+      <span class="section-tag">About RDP Auto</span>
+      <h2 class="section-title">West Yarmouth's Go-To Mobile Mechanic</h2>
+      <p style="color:var(--mid);margin-bottom:16px;line-height:1.75">RDP Auto &amp; Small Engine is a locally owned and operated mobile mechanic business serving the Cape Cod community. We built this company on a simple promise: honest work, fair prices, and the convenience of coming right to your door.</p>
+      <p style="color:var(--mid);margin-bottom:8px;line-height:1.75">Unlike big shops, we don't push unnecessary repairs or charge you for things you don't need. We explain everything before we start, and you approve the quote — always.</p>
+      <ul class="about-points">
+        <li><svg width="18" height="18"><use href="#i-check"/></svg> Mobile service from Falmouth to Eastham</li>
+        <li><svg width="18" height="18"><use href="#i-check"/></svg> Autos, HD trucks, powersports &amp; equipment</li>
+        <li><svg width="18" height="18"><use href="#i-check"/></svg> On-site welding &amp; custom fabrication</li>
+        <li><svg width="18" height="18"><use href="#i-check"/></svg> Custom wiring builds &amp; electrical repair</li>
+        <li><svg width="18" height="18"><use href="#i-check"/></svg> Competitive rates — lower than dealerships</li>
+        <li><svg width="18" height="18"><use href="#i-check"/></svg> Advance-planned jobs may qualify for discounts</li>
+      </ul>
+      <a href="contact.html" class="btn-primary" style="display:inline-flex">Schedule Service <svg width="18" height="18"><use href="#i-arrow"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="reviews">
+  <div class="reviews-inner">
+    <div class="section-header center" style="margin-bottom:40px">
+      <span class="section-tag" style="background:rgba(217,119,6,0.15);color:var(--amber2);border-color:rgba(217,119,6,0.3)">Reviews</span>
+      <h2 class="section-title" style="color:var(--white)">What Cape Cod Customers Say</h2>
+    </div>
+    <div class="reviews-pull reveal">
+      <div class="stars">
+        <svg width="22" height="22"><use href="#i-star"/></svg>
+        <svg width="22" height="22"><use href="#i-star"/></svg>
+        <svg width="22" height="22"><use href="#i-star"/></svg>
+        <svg width="22" height="22"><use href="#i-star"/></svg>
+        <svg width="22" height="22"><use href="#i-star"/></svg>
+      </div>
+      <p class="reviews-pull-text">"I can't say enough about the outstanding service I received from RDP Auto &amp; Equipment. Their team went above and beyond to meet our needs and exceeded our expectations. Having a mechanic come right to my home on Cape Cod saved me an entire day — I'd never go back to a shop."</p>
+      <div class="reviews-pull-author">— Oliver Hartman, Yarmouth Port, MA</div>
+    </div>
+    <div class="reviews-grid">
+      <div class="review-card reveal">
+        <div class="stars"><svg width="16" height="16"><use href="#i-star"/></svg><svg width="16" height="16"><use href="#i-star"/></svg><svg width="16" height="16"><use href="#i-star"/></svg><svg width="16" height="16"><use href="#i-star"/></svg><svg width="16" height="16"><use href="#i-star"/></svg></div>
+        <p>"Always reliable, always on time. RDP fixed my truck in my driveway while I worked from home. Incredibly convenient — and the price was very fair."</p>
+        <div class="reviewer">Mike T.</div><div class="reviewer-loc">Hyannis, MA</div>
+      </div>
+      <div class="review-card reveal d1">
+        <div class="stars"><svg width="16" height="16"><use href="#i-star"/></svg><svg width="16" height="16"><use href="#i-star"/></svg><svg width="16" height="16"><use href="#i-star"/></svg><svg width="16" height="16"><use href="#i-star"/></svg><svg width="16" height="16"><use href="#i-star"/></svg></div>
+        <p>"Had my riding mower serviced and my car's brakes done in the same visit. You can't get that anywhere else on the Cape. Highly recommend."</p>
+        <div class="reviewer">Susan K.</div><div class="reviewer-loc">Barnstable, MA</div>
+      </div>
+      <div class="review-card reveal d2">
+        <div class="stars"><svg width="16" height="16"><use href="#i-star"/></svg><svg width="16" height="16"><use href="#i-star"/></svg><svg width="16" height="16"><use href="#i-star"/></svg><svg width="16" height="16"><use href="#i-star"/></svg><svg width="16" height="16"><use href="#i-star"/></svg></div>
+        <p>"Honest, knowledgeable, and didn't try to upsell me on anything. Diagnosed my check engine light quickly and the fix was exactly what he quoted. Great guy."</p>
+        <div class="reviewer">Dave R.</div><div class="reviewer-loc">Dennis, MA</div>
+      </div>
+      <div class="review-card reveal">
+        <div class="stars"><svg width="16" height="16"><use href="#i-star"/></svg><svg width="16" height="16"><use href="#i-star"/></svg><svg width="16" height="16"><use href="#i-star"/></svg><svg width="16" height="16"><use href="#i-star"/></svg><svg width="16" height="16"><use href="#i-star"/></svg></div>
+        <p>"The welding on my trailer was outstanding. Came to my property in Brewster, did the whole job on-site. Saved me from renting a truck to haul it somewhere."</p>
+        <div class="reviewer">Tom B.</div><div class="reviewer-loc">Brewster, MA</div>
+      </div>
+      <div class="review-card reveal d1">
+        <div class="stars"><svg width="16" height="16"><use href="#i-star"/></svg><svg width="16" height="16"><use href="#i-star"/></svg><svg width="16" height="16"><use href="#i-star"/></svg><svg width="16" height="16"><use href="#i-star"/></svg><svg width="16" height="16"><use href="#i-star"/></svg></div>
+        <p>"Best decision I've made was switching from the dealership to RDP. Same quality work, half the price, and I didn't have to drive anywhere. Will never go back."</p>
+        <div class="reviewer">Linda M.</div><div class="reviewer-loc">Chatham, MA</div>
+      </div>
+      <div class="review-card reveal d2">
+        <div class="stars"><svg width="16" height="16"><use href="#i-star"/></svg><svg width="16" height="16"><use href="#i-star"/></svg><svg width="16" height="16"><use href="#i-star"/></svg><svg width="16" height="16"><use href="#i-star"/></svg><svg width="16" height="16"><use href="#i-star"/></svg></div>
+        <p>"Fixed my chainsaw and my son's dirtbike in the same afternoon. Nobody else on the Cape even touches small engines anymore. RDP is the real deal."</p>
+        <div class="reviewer">Paul G.</div><div class="reviewer-loc">Orleans, MA</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq">
+  <div class="faq-inner">
+    <div class="section-header center">
+      <span class="section-tag">FAQ</span>
+      <h2 class="section-title">Common Questions</h2>
+      <p class="section-sub" style="margin:0 auto 48px">Everything you need to know before booking your mobile service.</p>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-text">Do I need an appointment, or can you come same day?</span><span class="faq-icon"><svg width="16" height="16"><use href="#i-chevron-down"/></svg></span></button>
+      <div class="faq-a"><p>We strongly recommend calling ahead so we can schedule a time that works for you. Same-day appointments are sometimes available depending on our schedule — just give us a call at (774) 209-2270 and we'll do our best to accommodate you.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-text">What if I don't know what's wrong with my vehicle?</span><span class="faq-icon"><svg width="16" height="16"><use href="#i-chevron-down"/></svg></span></button>
+      <div class="faq-a"><p>No problem at all — that's exactly what our mobile diagnostic service is for. We show up with professional diagnostic equipment, scan your vehicle's systems, and give you a clear explanation of what's happening and what it will cost to fix. Mobile diagnostic callout starts at $100, then $50/hr.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-text">What types of vehicles and equipment do you service?</span><span class="faq-icon"><svg width="16" height="16"><use href="#i-chevron-down"/></svg></span></button>
+      <div class="faq-a"><p>We service most cars, trucks, SUVs, medium duty and heavy duty trucks, powersports (ATVs, dirt bikes, etc.), and a wide range of small engine equipment including mowers, trimmers, chainsaws, and leaf blowers. If you're not sure we can help, just call — we'll tell you honestly.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-text">How long do mobile repairs usually take?</span><span class="faq-icon"><svg width="16" height="16"><use href="#i-chevron-down"/></svg></span></button>
+      <div class="faq-a"><p>Most routine jobs like oil changes, brake pad replacements, and diagnostics take 1–2 hours on-site. More complex repairs may take longer or require a return visit if parts need to be ordered. We'll always give you a realistic time estimate before we start.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-text">Will you contact me before starting work or adding costs?</span><span class="faq-icon"><svg width="16" height="16"><use href="#i-chevron-down"/></svg></span></button>
+      <div class="faq-a"><p>Absolutely — always. We give you a full quote before any work begins, and if we discover additional issues while working, we stop and call you before proceeding. You're never surprised by the final bill. That's a promise we take seriously at RDP Auto.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-text">Where exactly do you provide mobile service?</span><span class="faq-icon"><svg width="16" height="16"><use href="#i-chevron-down"/></svg></span></button>
+      <div class="faq-a"><p>We cover all of Cape Cod from the Bourne and Sagamore bridges all the way to Eastham. This includes Falmouth, Mashpee, Barnstable, Hyannis, Yarmouth, Dennis, Harwich, Chatham, Brewster, Orleans, and Eastham. Travel fees apply depending on distance.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-text">Do you offer any discount for jobs planned in advance?</span><span class="faq-icon"><svg width="16" height="16"><use href="#i-chevron-down"/></svg></span></button>
+      <div class="faq-a"><p>Yes! One of the benefits of working with a local owner-operated shop is flexibility. If you plan ahead and schedule non-urgent work in advance, we can sometimes offer lower rates than a same-day emergency call. Reach out and let's talk about what you need.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BAND -->
+<section class="cta-band">
+  <div class="cta-band-inner">
+    <h2>Ready to Get Your Vehicle Fixed?</h2>
+    <p>Call or text us — we'll schedule your mobile service across Cape Cod.</p>
+    <a href="tel:7742092270" class="cta-band-phone">(774) 209-2270</a>
+    <div class="cta-band-hours">Mon–Fri 8am–6pm &nbsp;|&nbsp; Sat 8am–4pm</div>
+    <div class="cta-band-btns">
+      <a href="contact.html" class="btn-primary">Schedule Online</a>
+      <a href="services.html" class="btn-secondary" style="border-color:rgba(255,255,255,0.4);color:white">View Services</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="logo" style="margin-bottom:0">
+          <div class="logo-mark"><svg width="22" height="22" fill="none" stroke="#fff" stroke-width="2" viewBox="0 0 24 24"><use href="#i-wrench"/></svg></div>
+          <div class="logo-text"><span class="logo-name" style="color:white">RDP Auto</span><span class="logo-sub">& Small Engine</span></div>
+        </div>
+        <p>West Yarmouth's trusted mobile mechanic, serving all of Cape Cod from Falmouth to Eastham. Honest work, fair prices, at your door.</p>
+        <div style="display:flex;gap:8px;align-items:center;font-size:0.85rem;color:rgba(255,255,255,0.5)"><svg width="14" height="14"><use href="#i-phone"/></svg> <a href="tel:7742092270" style="color:var(--amber2)">(774) 209-2270</a></div>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <a href="services.html">Auto Repair</a>
+        <a href="services.html">Oil Changes</a>
+        <a href="services.html">Brake Repair</a>
+        <a href="services.html">Diagnostics</a>
+        <a href="services.html">Small Engine</a>
+        <a href="services.html">Welding</a>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="index.html">Home</a>
+        <a href="service-area.html">Service Area</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h4>Service Area</h4>
+        <a href="service-area.html">Falmouth</a>
+        <a href="service-area.html">Barnstable</a>
+        <a href="service-area.html">Hyannis</a>
+        <a href="service-area.html">Yarmouth</a>
+        <a href="service-area.html">Dennis</a>
+        <a href="service-area.html">Chatham</a>
+        <a href="service-area.html">Brewster</a>
+        <a href="service-area.html">Orleans</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 RDP Auto &amp; Small Engine. West Yarmouth, MA.</span>
+      <span>Mobile mechanic serving Cape Cod, MA</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+function toggleMenu(){
+  document.getElementById('mobileMenu').classList.toggle('open');
+}
+function toggleFaq(btn){
+  const item=btn.parentElement;
+  const isOpen=item.classList.contains('open');
+  document.querySelectorAll('.faq-item.open').forEach(el=>el.classList.remove('open'));
+  if(!isOpen)item.classList.add('open');
+}
+const obs=new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('in')});
+},{threshold:0.12});
+document.querySelectorAll('.reveal,.rl,.rr').forEach(el=>obs.observe(el));
+</script>
+</body>
+</html>
