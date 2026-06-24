@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Contact | RDP Auto & Small Engine — Schedule Mobile Service on Cape Cod</title>
+<meta name="description" content="Schedule mobile auto repair, small engine service, or welding on Cape Cod. Call or text (774) 209-2270 or fill out our online form."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+<style>
+:root{--ink:#0d1b2a;--ink2:#122233;--blue2:#2563eb;--amber:#d97706;--amber2:#f59e0b;--off:#f8f9fb;--border:#d0dae6;--mid:#6b7e94;--dark:#2d3f52;--white:#ffffff}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;color:var(--dark);background:var(--white);line-height:1.6}
+h1,h2,h3,h4{font-family:'Raleway',sans-serif;line-height:1.15}
+a{color:inherit;text-decoration:none}
+.topbar{background:var(--ink);color:#a8bdd0;font-size:0.8rem;padding:8px 0}
+.topbar-inner{max-width:1200px;margin:0 auto;padding:0 24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px}
+.topbar-left{display:flex;gap:20px;flex-wrap:wrap}
+.topbar-left span{display:flex;align-items:center;gap:6px}
+.topbar-cta{background:var(--amber);color:var(--ink);font-weight:700;font-size:0.8rem;padding:6px 16px;border-radius:4px;white-space:nowrap;display:flex;align-items:center;gap:6px}
+nav{background:var(--white);border-bottom:2px solid var(--border);position:sticky;top:0;z-index:100;box-shadow:0 2px 12px rgba(13,27,42,0.08)}
+.nav-inner{max-width:1200px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:68px}
+.logo{display:flex;align-items:center;gap:12px}
+.logo-mark{width:40px;height:40px;background:var(--ink);border-radius:8px;display:flex;align-items:center;justify-content:center}
+.logo-text{display:flex;flex-direction:column}
+.logo-name{font-family:'Raleway',sans-serif;font-weight:900;font-size:1.1rem;color:var(--ink);line-height:1.1}
+.logo-sub{font-size:0.7rem;color:var(--mid);letter-spacing:0.05em;text-transform:uppercase}
+.nav-links{display:flex;align-items:center;gap:28px}
+.nav-links a{font-size:0.9rem;font-weight:600;color:var(--dark);transition:color 0.2s;padding-bottom:4px;position:relative}
+.nav-links a::after{content:'';position:absolute;bottom:0;left:0;width:0;height:2px;background:var(--amber);transition:width 0.2s}
+.nav-links a:hover,.nav-links a.active{color:var(--blue2)}
+.nav-links a.active::after{width:100%}
+.nav-cta{background:var(--blue2);color:var(--white);font-weight:700;font-size:0.85rem;padding:10px 22px;border-radius:6px;display:flex;align-items:center;gap:8px;transition:background 0.2s}
+.nav-cta:hover{background:var(--ink)}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px}
+.hamburger span{width:24px;height:2px;background:var(--ink);border-radius:2px}
+.mobile-menu{display:none;position:fixed;top:68px;left:0;right:0;background:var(--white);border-bottom:2px solid var(--border);padding:20px 24px;z-index:99;flex-direction:column;gap:16px;box-shadow:0 8px 24px rgba(0,0,0,0.1)}
+.mobile-menu a{font-weight:600;color:var(--dark);font-size:1rem;padding:8px 0;border-bottom:1px solid var(--border)}
+.mobile-menu .nav-cta{margin-top:8px;justify-content:center;border:none}
+/* PAGE HERO */
+.page-hero{background:var(--ink);padding:80px 24px 64px;text-align:center}
+.page-hero-inner{max-width:700px;margin:0 auto}
+.page-hero-tag{display:inline-block;background:rgba(217,119,6,0.15);border:1px solid rgba(217,119,6,0.3);color:var(--amber2);font-size:0.75rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;padding:5px 14px;border-radius:100px;margin-bottom:16px}
+.page-hero h1{font-size:clamp(2rem,4.5vw,3.2rem);font-weight:900;color:var(--white);margin-bottom:16px}
+.page-hero p{font-size:1.05rem;color:rgba(255,255,255,0.7);line-height:1.75}
+/* CONTACT SECTION */
+.contact-section{padding:72px 24px;background:var(--off)}
+.contact-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1.4fr;gap:64px;align-items:start}
+/* INFO SIDE */
+.contact-info h2{font-family:'Raleway',sans-serif;font-weight:900;font-size:clamp(1.5rem,2.5vw,2rem);color:var(--ink);margin-bottom:14px}
+.contact-info p{font-size:0.95rem;color:var(--mid);line-height:1.75;margin-bottom:32px}
+.contact-cards{display:flex;flex-direction:column;gap:16px;margin-bottom:32px}
+.contact-card{background:var(--white);border:1px solid var(--border);border-radius:12px;padding:20px 24px;display:flex;gap:16px;align-items:flex-start;transition:border-color 0.2s,transform 0.2s}
+.contact-card:hover{border-color:var(--blue2);transform:translateX(4px)}
+.contact-card-icon{width:44px;height:44px;background:rgba(37,99,235,0.08);border-radius:10px;display:flex;align-items:center;justify-content:center;color:var(--blue2);flex-shrink:0}
+.contact-card strong{display:block;font-family:'Raleway',sans-serif;font-size:0.9rem;font-weight:800;color:var(--ink);margin-bottom:4px}
+.contact-card span{font-size:0.88rem;color:var(--mid);line-height:1.6}
+.contact-card a{color:var(--blue2);font-weight:600}
+/* HOURS */
+.hours-table{width:100%;border-collapse:collapse;font-size:0.88rem}
+.hours-table tr{border-bottom:1px solid var(--border)}
+.hours-table tr:last-child{border-bottom:none}
+.hours-table td{padding:10px 4px}
+.hours-table td:last-child{text-align:right;font-weight:600;color:var(--dark)}
+.hours-table .closed{color:#ef4444}
+/* FORM */
+.contact-form-wrap{background:var(--white);border:1px solid var(--border);border-radius:20px;padding:40px;box-shadow:0 8px 32px rgba(13,27,42,0.06)}
+.form-title{font-family:'Raleway',sans-serif;font-weight:900;font-size:1.5rem;color:var(--ink);margin-bottom:6px}
+.form-sub{font-size:0.88rem;color:var(--mid);margin-bottom:28px}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px}
+.form-group{margin-bottom:16px}
+.form-group label{display:block;font-size:0.82rem;font-weight:700;color:var(--dark);margin-bottom:6px;text-transform:uppercase;letter-spacing:0.06em}
+.form-group input,.form-group select,.form-group textarea{width:100%;padding:12px 16px;border:1.5px solid var(--border);border-radius:8px;font-family:'Inter',sans-serif;font-size:0.9rem;color:var(--dark);background:var(--off);transition:border-color 0.2s,box-shadow 0.2s;outline:none}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:var(--blue2);box-shadow:0 0 0 3px rgba(37,99,235,0.1);background:var(--white)}
+.form-group textarea{resize:vertical;min-height:100px}
+.form-group select{cursor:pointer}
+.form-submit{width:100%;padding:15px;background:var(--amber);color:var(--ink);font-family:'Raleway',sans-serif;font-weight:800;font-size:1rem;border:none;border-radius:8px;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:10px;transition:all 0.2s;margin-top:8px}
+.form-submit:hover{background:var(--amber2);transform:translateY(-1px);box-shadow:0 6px 20px rgba(217,119,6,0.3)}
+.form-note{font-size:0.8rem;color:var(--mid);margin-top:12px;text-align:center;line-height:1.6}
+/* SUCCESS */
+.form-success{display:none;text-align:center;padding:40px 20px}
+.form-success svg{color:var(--amber);margin:0 auto 16px}
+.form-success h3{font-family:'Raleway',sans-serif;font-size:1.4rem;font-weight:900;color:var(--ink);margin-bottom:8px}
+.form-success p{color:var(--mid);font-size:0.95rem}
+/* REASSURANCE */
+.reassurance{background:var(--ink);padding:60px 24px}
+.reassurance-inner{max-width:1000px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:32px;text-align:center}
+.reassurance-item svg{color:var(--amber);margin:0 auto 12px}
+.reassurance-item h3{font-family:'Raleway',sans-serif;font-weight:800;font-size:1rem;color:var(--white);margin-bottom:8px}
+.reassurance-item p{font-size:0.85rem;color:rgba(255,255,255,0.55);line-height:1.65}
+footer{background:var(--ink);color:rgba(255,255,255,0.6);padding:60px 24px 32px;border-top:1px solid rgba(255,255,255,0.06)}
+.footer-inner{max-width:1200px;margin:0 auto}
+.footer-top{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:48px;margin-bottom:48px}
+.footer-brand p{font-size:0.9rem;margin:16px 0 24px;line-height:1.7}
+.footer-col h4{font-family:'Raleway',sans-serif;font-weight:800;font-size:0.85rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--white);margin-bottom:16px}
+.footer-col a{display:block;font-size:0.88rem;color:rgba(255,255,255,0.55);margin-bottom:10px;transition:color 0.2s}
+.footer-col a:hover{color:var(--amber2)}
+.footer-bottom{border-top:1px solid rgba(255,255,255,0.08);padding-top:24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;font-size:0.82rem}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity 0.7s,transform 0.7s}
+.reveal.in{opacity:1;transform:none}
+@media(max-width:900px){.contact-inner{grid-template-columns:1fr}.reassurance-inner{grid-template-columns:1fr}.form-row{grid-template-columns:1fr}.footer-top{grid-template-columns:1fr 1fr}}
+@media(max-width:768px){.nav-links,.nav-cta{display:none}.hamburger{display:flex}.mobile-menu.open{display:flex}.footer-top{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+  <symbol id="i-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.72A2 2 0 012 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></symbol>
+  <symbol id="i-wrench" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></symbol>
+</svg>
+
+<div class="topbar"><div class="topbar-inner"><div class="topbar-left"><span><svg width="14" height="14"><use href="#i-pin"/></svg> West Yarmouth, MA</span><span><svg width="14" height="14"><use href="#i-clock"/></svg> Mon–Sat 8am–6pm</span></div><a href="tel:7742092270" class="topbar-cta"><svg width="14" height="14"><use href="#i-phone"/></svg> (774) 209-2270</a></div></div>
+
+<nav><div class="nav-inner">
+  <a href="index.html" class="logo"><div class="logo-mark"><svg width="22" height="22" fill="none" stroke="#fff" stroke-width="2" viewBox="0 0 24 24"><use href="#i-wrench"/></svg></div><div class="logo-text"><span class="logo-name">RDP Auto</span><span class="logo-sub">& Small Engine • Cape Cod</span></div></a>
+  <div class="nav-links"><a href="index.html">Home</a><a href="services.html">Services</a><a href="pricing.html">Pricing</a><a href="service-area.html">Service Area</a><a href="contact.html" class="active">Contact</a></div>
+  <a href="tel:7742092270" class="nav-cta"><svg width="16" height="16"><use href="#i-phone"/></svg> Call Now</a>
+  <div class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></div>
+</div></nav>
+<div class="mobile-menu" id="mobileMenu"><a href="index.html">Home</a><a href="services.html">Services</a><a href="pricing.html">Pricing</a><a href="service-area.html">Service Area</a><a href="contact.html">Contact</a><a href="tel:7742092270" class="nav-cta"><svg width="16" height="16"><use href="#i-phone"/></svg> (774) 209-2270</a></div>
+
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <div class="page-hero-tag">Get In Touch</div>
+    <h1>Book Your Mobile Service</h1>
+    <p>Call, text, or fill out the form below. We respond quickly and will confirm your appointment the same day.</p>
+  </div>
+</div>
+
+<section class="contact-section">
+  <div class="contact-inner">
+    <div class="contact-info reveal">
+      <h2>Let's Get You Scheduled</h2>
+      <p>The easiest way to reach us is to call or text. If you prefer, fill out the form and we'll get back to you promptly.</p>
+
+      <div class="contact-cards">
+        <div class="contact-card">
+          <div class="contact-card-icon"><svg width="22" height="22"><use href="#i-phone"/></svg></div>
+          <div>
+            <strong>Call or Text</strong>
+            <span><a href="tel:7742092270">(774) 209-2270</a><br/>Fastest way to reach us — we respond within the hour.</span>
+          </div>
+        </div>
+        <div class="contact-card">
+          <div class="contact-card-icon"><svg width="22" height="22"><use href="#i-pin"/></svg></div>
+          <div>
+            <strong>Based In</strong>
+            <span>West Yarmouth, Massachusetts<br/>Serving all of Cape Cod — we come to you.</span>
+          </div>
+        </div>
+        <div class="contact-card">
+          <div class="contact-card-icon"><svg width="22" height="22"><use href="#i-clock"/></svg></div>
+          <div>
+            <strong>Hours of Operation</strong>
+            <span>See schedule below.</span>
+          </div>
+        </div>
+      </div>
+
+      <h3 style="font-family:'Raleway',sans-serif;font-weight:800;font-size:1rem;color:var(--ink);margin-bottom:14px;text-transform:uppercase;letter-spacing:0.06em">Hours</h3>
+      <table class="hours-table">
+        <tr><td>Monday</td><td>8:00 AM – 6:00 PM</td></tr>
+        <tr><td>Tuesday</td><td>8:00 AM – 6:00 PM</td></tr>
+        <tr><td>Wednesday</td><td>8:00 AM – 6:00 PM</td></tr>
+        <tr><td>Thursday</td><td>8:00 AM – 6:00 PM</td></tr>
+        <tr><td>Friday</td><td>8:00 AM – 6:00 PM</td></tr>
+        <tr><td>Saturday</td><td>8:00 AM – 4:00 PM</td></tr>
+        <tr><td>Sunday</td><td class="closed">Closed</td></tr>
+      </table>
+
+      <div style="margin-top:28px;padding:16px 20px;background:rgba(217,119,6,0.07);border:1px solid rgba(217,119,6,0.2);border-radius:10px;font-size:0.88rem;color:var(--dark);line-height:1.6">
+        <strong style="color:var(--amber);display:block;margin-bottom:4px">Tip: Plan Ahead &amp; Save</strong>
+        Advance-planned, non-urgent jobs may qualify for better rates. If you're not in a rush, mention it when you contact us.
+      </div>
+    </div>
+
+    <div class="contact-form-wrap reveal">
+      <div id="formContent">
+        <h2 class="form-title">Request Service</h2>
+        <p class="form-sub">Fill out the form and we'll reach out to confirm your appointment. All fields help us prepare for your specific job.</p>
+        <form onsubmit="submitForm(event)">
+          <div class="form-row">
+            <div class="form-group"><label>First Name *</label><input type="text" required placeholder="John"/></div>
+            <div class="form-group"><label>Last Name *</label><input type="text" required placeholder="Smith"/></div>
+          </div>
+          <div class="form-row">
+            <div class="form-group"><label>Phone Number *</label><input type="tel" required placeholder="(774) 555-0000"/></div>
+            <div class="form-group"><label>Email Address</label><input type="email" placeholder="john@example.com"/></div>
+          </div>
+          <div class="form-group">
+            <label>Service Type *</label>
+            <select required>
+              <option value="" disabled selected>Select a service...</option>
+              <option>Auto Repair (General)</option>
+              <option>Oil Change &amp; Maintenance</option>
+              <option>Brake Service</option>
+              <option>Diagnostic / Check Engine Light</option>
+              <option>Small Engine / Equipment Service</option>
+              <option>Welding &amp; Fabrication</option>
+              <option>Medium / Heavy Duty Truck</option>
+              <option>Wiring &amp; Electrical</option>
+              <option>Other / Not Sure</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Vehicle / Equipment</label>
+            <input type="text" placeholder="e.g. 2018 Ford F-150, Honda mower, etc."/>
+          </div>
+          <div class="form-group">
+            <label>Your Town / Location *</label>
+            <input type="text" required placeholder="e.g. Hyannis, Chatham, Brewster..."/>
+          </div>
+          <div class="form-group">
+            <label>Describe the Issue</label>
+            <textarea placeholder="Tell us what's going on — the more detail, the better. Check engine light? Strange noise? When did it start?"></textarea>
+          </div>
+          <button type="submit" class="form-submit">
+            <svg width="18" height="18"><use href="#i-arrow"/></svg>
+            Send My Request
+          </button>
+          <p class="form-note">We'll confirm your appointment by phone or text, usually within a few hours. You won't be charged until the job is approved and complete.</p>
+        </form>
+      </div>
+      <div class="form-success" id="formSuccess">
+        <svg width="56" height="56" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+        <h3>Request Received!</h3>
+        <p>Thanks for reaching out. We'll contact you by phone or text to confirm your appointment — usually within a few hours.</p>
+        <p style="margin-top:12px">Or call us directly: <a href="tel:7742092270" style="color:var(--blue2);font-weight:600">(774) 209-2270</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="reassurance">
+  <div class="reassurance-inner">
+    <div class="reassurance-item">
+      <svg width="36" height="36" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><use href="#i-shield"/></svg>
+      <h3>Quote Before We Start</h3>
+      <p>You'll always receive a clear quote before any work begins. No surprise charges, ever.</p>
+    </div>
+    <div class="reassurance-item">
+      <svg width="36" height="36" fill="currentColor" viewBox="0 0 24 24"><use href="#i-star"/></svg>
+      <h3>5-Star Service</h3>
+      <p>We've built our reputation on honest work and happy customers across Cape Cod.</p>
+    </div>
+    <div class="reassurance-item">
+      <svg width="36" height="36" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><use href="#i-check"/></svg>
+      <h3>Pay When It's Done</h3>
+      <p>You approve the work. We complete it. Then you pay. Simple and fair, every time.</p>
+    </div>
+  </div>
+</section>
+
+<footer><div class="footer-inner">
+  <div class="footer-top">
+    <div class="footer-brand"><div class="logo"><div class="logo-mark"><svg width="22" height="22" fill="none" stroke="#fff" stroke-width="2" viewBox="0 0 24 24"><use href="#i-wrench"/></svg></div><div class="logo-text"><span class="logo-name" style="color:white">RDP Auto</span><span class="logo-sub">& Small Engine</span></div></div><p>West Yarmouth's trusted mobile mechanic. Serving all of Cape Cod from Falmouth to Eastham.</p><div style="display:flex;gap:8px;align-items:center;font-size:0.85rem;color:rgba(255,255,255,0.5)"><svg width="14" height="14"><use href="#i-phone"/></svg> <a href="tel:7742092270" style="color:var(--amber2)">(774) 209-2270</a></div></div>
+    <div class="footer-col"><h4>Services</h4><a href="services.html">Auto Repair</a><a href="services.html">Oil Changes</a><a href="services.html">Brake Repair</a><a href="services.html">Small Engine</a><a href="services.html">Welding</a></div>
+    <div class="footer-col"><h4>Company</h4><a href="index.html">Home</a><a href="service-area.html">Service Area</a><a href="pricing.html">Pricing</a><a href="contact.html">Contact</a></div>
+    <div class="footer-col"><h4>Service Area</h4><a href="service-area.html">Falmouth</a><a href="service-area.html">Barnstable</a><a href="service-area.html">Yarmouth</a><a href="service-area.html">Dennis</a><a href="service-area.html">Chatham</a><a href="service-area.html">Orleans</a></div>
+  </div>
+  <div class="footer-bottom"><span>© 2025 RDP Auto & Small Engine. West Yarmouth, MA.</span><span>Mobile mechanic serving Cape Cod, MA</span></div>
+</div></footer>
+
+<script>
+function toggleMenu(){document.getElementById('mobileMenu').classList.toggle('open')}
+function submitForm(e){
+  e.preventDefault();
+  document.getElementById('formContent').style.display='none';
+  document.getElementById('formSuccess').style.display='block';
+}
+const obs=new IntersectionObserver(en=>{en.forEach(x=>{if(x.isIntersecting)x.target.classList.add('in')})},{threshold:0.1});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+</script>
+</body>
+</html>
