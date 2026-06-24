@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Service Area | RDP Auto — Mobile Mechanic Serving All of Cape Cod, MA</title>
+<meta name="description" content="RDP Auto & Small Engine serves all of Cape Cod from Falmouth to Eastham. Mobile mechanic at your door — no towing required. Call (774) 209-2270."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+<style>
+:root{--ink:#0d1b2a;--ink2:#122233;--blue2:#2563eb;--amber:#d97706;--amber2:#f59e0b;--off:#f8f9fb;--border:#d0dae6;--mid:#6b7e94;--dark:#2d3f52;--white:#ffffff}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;color:var(--dark);background:var(--white);line-height:1.6}
+h1,h2,h3,h4{font-family:'Raleway',sans-serif;line-height:1.15}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+.topbar{background:var(--ink);color:#a8bdd0;font-size:0.8rem;padding:8px 0}
+.topbar-inner{max-width:1200px;margin:0 auto;padding:0 24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px}
+.topbar-left{display:flex;gap:20px;flex-wrap:wrap}
+.topbar-left span{display:flex;align-items:center;gap:6px}
+.topbar-cta{background:var(--amber);color:var(--ink);font-weight:700;font-size:0.8rem;padding:6px 16px;border-radius:4px;white-space:nowrap;display:flex;align-items:center;gap:6px}
+nav{background:var(--white);border-bottom:2px solid var(--border);position:sticky;top:0;z-index:100;box-shadow:0 2px 12px rgba(13,27,42,0.08)}
+.nav-inner{max-width:1200px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:68px}
+.logo{display:flex;align-items:center;gap:12px}
+.logo-mark{width:40px;height:40px;background:var(--ink);border-radius:8px;display:flex;align-items:center;justify-content:center}
+.logo-text{display:flex;flex-direction:column}
+.logo-name{font-family:'Raleway',sans-serif;font-weight:900;font-size:1.1rem;color:var(--ink);line-height:1.1}
+.logo-sub{font-size:0.7rem;color:var(--mid);letter-spacing:0.05em;text-transform:uppercase}
+.nav-links{display:flex;align-items:center;gap:28px}
+.nav-links a{font-size:0.9rem;font-weight:600;color:var(--dark);transition:color 0.2s;padding-bottom:4px;position:relative}
+.nav-links a::after{content:'';position:absolute;bottom:0;left:0;width:0;height:2px;background:var(--amber);transition:width 0.2s}
+.nav-links a:hover,.nav-links a.active{color:var(--blue2)}
+.nav-links a.active::after{width:100%}
+.nav-cta{background:var(--blue2);color:var(--white);font-weight:700;font-size:0.85rem;padding:10px 22px;border-radius:6px;display:flex;align-items:center;gap:8px;transition:background 0.2s}
+.nav-cta:hover{background:var(--ink)}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px}
+.hamburger span{width:24px;height:2px;background:var(--ink);border-radius:2px}
+.mobile-menu{display:none;position:fixed;top:68px;left:0;right:0;background:var(--white);border-bottom:2px solid var(--border);padding:20px 24px;z-index:99;flex-direction:column;gap:16px;box-shadow:0 8px 24px rgba(0,0,0,0.1)}
+.mobile-menu a{font-weight:600;color:var(--dark);font-size:1rem;padding:8px 0;border-bottom:1px solid var(--border)}
+.mobile-menu .nav-cta{margin-top:8px;justify-content:center;border:none}
+.page-hero{background:var(--ink);padding:80px 24px 64px;text-align:center}
+.page-hero-inner{max-width:700px;margin:0 auto}
+.page-hero-tag{display:inline-block;background:rgba(217,119,6,0.15);border:1px solid rgba(217,119,6,0.3);color:var(--amber2);font-size:0.75rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;padding:5px 14px;border-radius:100px;margin-bottom:16px}
+.page-hero h1{font-size:clamp(2rem,4.5vw,3.2rem);font-weight:900;color:var(--white);margin-bottom:16px}
+.page-hero p{font-size:1.05rem;color:rgba(255,255,255,0.7);line-height:1.75}
+.section{padding:72px 24px}
+.section-inner{max-width:1200px;margin:0 auto}
+.section-tag{display:inline-block;background:rgba(37,99,235,0.08);color:var(--blue2);font-size:0.75rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;padding:5px 14px;border-radius:100px;margin-bottom:14px;border:1px solid rgba(37,99,235,0.15)}
+.section-title{font-size:clamp(1.6rem,3vw,2.4rem);font-weight:900;color:var(--ink);margin-bottom:14px}
+.section-sub{font-size:1rem;color:var(--mid);line-height:1.75;margin-bottom:48px}
+/* MAP VISUAL */
+.map-wrap{position:relative;border-radius:20px;overflow:hidden;height:420px;margin-bottom:60px;box-shadow:0 16px 48px rgba(13,27,42,0.15)}
+.map-wrap img{width:100%;height:100%;object-fit:cover}
+.map-overlay{position:absolute;inset:0;background:linear-gradient(to right, rgba(13,27,42,0.85) 0%, rgba(13,27,42,0.4) 60%, transparent 100%);display:flex;align-items:center;padding:48px}
+.map-overlay-content{color:white;max-width:400px}
+.map-overlay-content h2{font-family:'Raleway',sans-serif;font-weight:900;font-size:2rem;margin-bottom:12px}
+.map-overlay-content p{color:rgba(255,255,255,0.75);font-size:0.95rem;line-height:1.7;margin-bottom:20px}
+.map-route{display:flex;align-items:center;gap:10px;font-size:0.9rem;font-weight:600;color:var(--amber2)}
+.map-route-dot{width:10px;height:10px;background:var(--amber);border-radius:50%;flex-shrink:0}
+.map-route-line{flex:1;height:2px;background:linear-gradient(to right,var(--amber),transparent)}
+/* AREA GRID */
+.area-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-bottom:60px}
+.area-card{background:var(--off);border:1px solid var(--border);border-radius:12px;padding:24px;transition:transform 0.2s,box-shadow 0.2s;cursor:default}
+.area-card:hover{transform:translateY(-3px);box-shadow:0 8px 24px rgba(13,27,42,0.1);border-color:var(--blue2)}
+.area-card h3{font-family:'Raleway',sans-serif;font-weight:800;font-size:1.05rem;color:var(--ink);margin-bottom:6px}
+.area-card-drive{font-size:0.8rem;font-weight:700;color:var(--blue2);display:flex;align-items:center;gap:5px;margin-bottom:10px}
+.area-card p{font-size:0.85rem;color:var(--mid);line-height:1.6}
+/* ABOUT STRIP */
+.cape-strip{background:var(--ink2);padding:72px 24px}
+.cape-strip-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.cape-img{border-radius:16px;overflow:hidden;height:400px}
+.cape-img img{width:100%;height:100%;object-fit:cover}
+.cape-content h2{font-family:'Raleway',sans-serif;font-weight:900;font-size:clamp(1.6rem,3vw,2.2rem);color:white;margin-bottom:16px}
+.cape-content p{font-size:0.95rem;color:rgba(255,255,255,0.65);line-height:1.8;margin-bottom:16px}
+.cape-points{list-style:none;margin:20px 0}
+.cape-points li{display:flex;gap:10px;align-items:flex-start;margin-bottom:12px;font-size:0.9rem;color:rgba(255,255,255,0.8)}
+.cape-points li svg{color:var(--amber);flex-shrink:0;margin-top:3px}
+/* CTA BAND */
+.cta-band{background:var(--blue2);padding:80px 24px;text-align:center}
+.cta-band-inner{max-width:700px;margin:0 auto}
+.cta-band h2{font-family:'Raleway',sans-serif;font-weight:900;font-size:clamp(1.8rem,4vw,3rem);color:var(--white);margin-bottom:16px}
+.cta-band p{color:rgba(255,255,255,0.8);font-size:1.05rem;margin-bottom:32px}
+.cta-band-phone{font-family:'Raleway',sans-serif;font-size:clamp(2.2rem,5vw,3.5rem);font-weight:900;color:var(--amber2);display:block;margin-bottom:8px}
+.cta-band-hours{font-size:0.9rem;color:rgba(255,255,255,0.65);margin-bottom:24px}
+.btn-primary{background:var(--amber);color:var(--ink);font-weight:800;font-family:'Raleway',sans-serif;font-size:1rem;padding:14px 28px;border-radius:6px;display:inline-flex;align-items:center;gap:10px;transition:all 0.2s}
+.btn-primary:hover{background:var(--amber2);transform:translateY(-1px)}
+footer{background:var(--ink);color:rgba(255,255,255,0.6);padding:60px 24px 32px}
+.footer-inner{max-width:1200px;margin:0 auto}
+.footer-top{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:48px;margin-bottom:48px}
+.footer-brand p{font-size:0.9rem;margin:16px 0 24px;line-height:1.7}
+.footer-col h4{font-family:'Raleway',sans-serif;font-weight:800;font-size:0.85rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--white);margin-bottom:16px}
+.footer-col a{display:block;font-size:0.88rem;color:rgba(255,255,255,0.55);margin-bottom:10px;transition:color 0.2s}
+.footer-col a:hover{color:var(--amber2)}
+.footer-bottom{border-top:1px solid rgba(255,255,255,0.08);padding-top:24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;font-size:0.82rem}
+.reveal,.rl,.rr{opacity:0;transition:opacity 0.7s,transform 0.7s}
+.reveal{transform:translateY(24px)}.rl{transform:translateX(-40px)}.rr{transform:translateX(40px)}
+.reveal.in,.rl.in,.rr.in{opacity:1;transform:none}
+.d1{transition-delay:0.1s}.d2{transition-delay:0.2s}.d3{transition-delay:0.3s}
+@media(max-width:1024px){.area-grid{grid-template-columns:repeat(2,1fr)}.cape-strip-inner{grid-template-columns:1fr}.footer-top{grid-template-columns:1fr 1fr}}
+@media(max-width:768px){.nav-links,.nav-cta{display:none}.hamburger{display:flex}.mobile-menu.open{display:flex}.map-overlay{padding:24px}.map-overlay-content h2{font-size:1.5rem}.footer-top{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+  <symbol id="i-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.72A2 2 0 012 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></symbol>
+  <symbol id="i-wrench" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></symbol>
+  <symbol id="i-drive" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></symbol>
+</svg>
+
+<div class="topbar"><div class="topbar-inner"><div class="topbar-left"><span><svg width="14" height="14"><use href="#i-pin"/></svg> West Yarmouth, MA</span><span><svg width="14" height="14"><use href="#i-clock"/></svg> Mon–Sat 8am–6pm</span></div><a href="tel:7742092270" class="topbar-cta"><svg width="14" height="14"><use href="#i-phone"/></svg> (774) 209-2270</a></div></div>
+
+<nav><div class="nav-inner">
+  <a href="index.html" class="logo"><div class="logo-mark"><svg width="22" height="22" fill="none" stroke="#fff" stroke-width="2" viewBox="0 0 24 24"><use href="#i-wrench"/></svg></div><div class="logo-text"><span class="logo-name">RDP Auto</span><span class="logo-sub">& Small Engine • Cape Cod</span></div></a>
+  <div class="nav-links"><a href="index.html">Home</a><a href="services.html">Services</a><a href="pricing.html">Pricing</a><a href="service-area.html" class="active">Service Area</a><a href="contact.html">Contact</a></div>
+  <a href="tel:7742092270" class="nav-cta"><svg width="16" height="16"><use href="#i-phone"/></svg> Call Now</a>
+  <div class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></div>
+</div></nav>
+<div class="mobile-menu" id="mobileMenu"><a href="index.html">Home</a><a href="services.html">Services</a><a href="pricing.html">Pricing</a><a href="service-area.html">Service Area</a><a href="contact.html">Contact</a><a href="tel:7742092270" class="nav-cta"><svg width="16" height="16"><use href="#i-phone"/></svg> (774) 209-2270</a></div>
+
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <div class="page-hero-tag">Coverage Area</div>
+    <h1>Mobile Service Across All of Cape Cod</h1>
+    <p>Based in West Yarmouth, we serve every town on the Cape — from the bridges at Bourne and Sagamore all the way to Eastham. We come to you.</p>
+  </div>
+</div>
+
+<section class="section">
+  <div class="section-inner">
+    <div class="map-wrap reveal">
+      <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?w=1400&q=85" alt="Cape Cod Massachusetts aerial view"/>
+      <div class="map-overlay">
+        <div class="map-overlay-content">
+          <h2>Falmouth to Eastham</h2>
+          <p>Our mobile unit covers the entire Cape — from the bridges at Bourne &amp; Sagamore to the tip at Eastham. Over 70 miles of coverage.</p>
+          <div class="map-route">
+            <div class="map-route-dot"></div>
+            <span>Falmouth</span>
+            <div class="map-route-line"></div>
+            <span>West Yarmouth (Home Base)</span>
+            <div class="map-route-line"></div>
+            <span>Eastham</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div style="text-align:center;margin-bottom:48px">
+      <span class="section-tag">Towns We Serve</span>
+      <h2 class="section-title">Every Town on the Cape</h2>
+      <p class="section-sub" style="max-width:580px;margin:0 auto">Travel fees are built into our mobile rates. We serve these communities regularly — call to confirm if you're between towns.</p>
+    </div>
+
+    <div class="area-grid">
+      <div class="area-card reveal">
+        <h3>Falmouth</h3>
+        <div class="area-card-drive"><svg width="13" height="13"><use href="#i-drive"/></svg> ~20 min from base</div>
+        <p>Including East Falmouth, North Falmouth, Woods Hole &amp; Teaticket.</p>
+      </div>
+      <div class="area-card reveal d1">
+        <h3>Mashpee</h3>
+        <div class="area-card-drive"><svg width="13" height="13"><use href="#i-drive"/></svg> ~15 min from base</div>
+        <p>Including New Seabury &amp; Popponesset.</p>
+      </div>
+      <div class="area-card reveal d2">
+        <h3>Barnstable</h3>
+        <div class="area-card-drive"><svg width="13" height="13"><use href="#i-drive"/></svg> ~10 min from base</div>
+        <p>Including Hyannis, Centerville, Marstons Mills, Cotuit &amp; Osterville.</p>
+      </div>
+      <div class="area-card reveal d3">
+        <h3>Yarmouth</h3>
+        <div class="area-card-drive"><svg width="13" height="13"><use href="#i-drive"/></svg> Home base</div>
+        <p>West Yarmouth, South Yarmouth &amp; Yarmouth Port — our home territory.</p>
+      </div>
+      <div class="area-card reveal">
+        <h3>Dennis</h3>
+        <div class="area-card-drive"><svg width="13" height="13"><use href="#i-drive"/></svg> ~10 min from base</div>
+        <p>Dennis, Dennis Port, South Dennis &amp; East Dennis.</p>
+      </div>
+      <div class="area-card reveal d1">
+        <h3>Harwich</h3>
+        <div class="area-card-drive"><svg width="13" height="13"><use href="#i-drive"/></svg> ~15 min from base</div>
+        <p>Harwich, Harwich Port &amp; East Harwich.</p>
+      </div>
+      <div class="area-card reveal d2">
+        <h3>Chatham</h3>
+        <div class="area-card-drive"><svg width="13" height="13"><use href="#i-drive"/></svg> ~20 min from base</div>
+        <p>Chatham &amp; West Chatham — including commercial and marine-adjacent properties.</p>
+      </div>
+      <div class="area-card reveal d3">
+        <h3>Brewster</h3>
+        <div class="area-card-drive"><svg width="13" height="13"><use href="#i-drive"/></svg> ~20 min from base</div>
+        <p>Full Brewster coverage including rural and off-road properties.</p>
+      </div>
+      <div class="area-card reveal">
+        <h3>Orleans</h3>
+        <div class="area-card-drive"><svg width="13" height="13"><use href="#i-drive"/></svg> ~25 min from base</div>
+        <p>Orleans, East Orleans &amp; surrounding areas near the Outer Cape.</p>
+      </div>
+      <div class="area-card reveal d1">
+        <h3>Eastham</h3>
+        <div class="area-card-drive"><svg width="13" height="13"><use href="#i-drive"/></svg> ~30 min from base</div>
+        <p>Our eastern boundary — including the National Seashore corridor.</p>
+      </div>
+      <div class="area-card reveal d2">
+        <h3>Sandwich &amp; Bourne</h3>
+        <div class="area-card-drive"><svg width="13" height="13"><use href="#i-drive"/></svg> ~25 min from base</div>
+        <p>Bridge communities at the upper Cape. Call for availability near the bridges.</p>
+      </div>
+      <div class="area-card reveal d3">
+        <h3>Mid-Cape Highways</h3>
+        <div class="area-card-drive"><svg width="13" height="13"><use href="#i-drive"/></svg> Along Route 6 &amp; 28</div>
+        <p>Broken down on Route 6 or 28? Call us — we may be able to help you get moving.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cape-strip">
+  <div class="cape-strip-inner">
+    <div class="cape-img rl">
+      <img src="https://images.unsplash.com/photo-1596727362302-b8d891c42ab8?w=800&q=85" alt="Cape Cod coastal road"/>
+    </div>
+    <div class="rr">
+      <span class="section-tag" style="background:rgba(217,119,6,0.15);color:var(--amber2);border-color:rgba(217,119,6,0.3)">Why Mobile?</span>
+      <h2>No Tow Truck. No Trip to the Shop.</h2>
+      <p style="font-size:0.95rem;color:rgba(255,255,255,0.65);line-height:1.8;margin-bottom:16px">Cape Cod isn't like other places. Seasonal traffic, limited tow truck availability, and long distances to the nearest shop make a mobile mechanic genuinely more practical here than almost anywhere else.</p>
+      <p style="font-size:0.95rem;color:rgba(255,255,255,0.65);line-height:1.8;margin-bottom:20px">Whether your car breaks down in Chatham in August, your mower dies before a weekend visit, or your truck needs brakes before Monday morning — we get to you fast, and we fix it right there.</p>
+      <ul class="cape-points">
+        <li><svg width="16" height="16"><use href="#i-check"/></svg> No tow truck needed — we come to your vehicle</li>
+        <li><svg width="16" height="16"><use href="#i-check"/></svg> Travel included in all mobile service rates</li>
+        <li><svg width="16" height="16"><use href="#i-check"/></svg> Commercial &amp; residential properties welcome</li>
+        <li><svg width="16" height="16"><use href="#i-check"/></svg> Beach parking lots, campgrounds, job sites — we come anywhere</li>
+        <li><svg width="16" height="16"><use href="#i-check"/></svg> Advance scheduling may reduce travel costs</li>
+      </ul>
+      <a href="contact.html" class="btn-primary" style="display:inline-flex;margin-top:24px">Schedule Service <svg width="18" height="18"><use href="#i-arrow"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="cta-band-inner">
+    <h2>Not Sure If We Cover Your Area?</h2>
+    <p>Just call or text — we'll let you know right away and get you scheduled.</p>
+    <a href="tel:7742092270" class="cta-band-phone">(774) 209-2270</a>
+    <div class="cta-band-hours">Mon–Fri 8am–6pm &nbsp;|&nbsp; Sat 8am–4pm</div>
+    <a href="contact.html" class="btn-primary">Send a Message <svg width="18" height="18"><use href="#i-arrow"/></svg></a>
+  </div>
+</section>
+
+<footer><div class="footer-inner">
+  <div class="footer-top">
+    <div class="footer-brand"><div class="logo"><div class="logo-mark"><svg width="22" height="22" fill="none" stroke="#fff" stroke-width="2" viewBox="0 0 24 24"><use href="#i-wrench"/></svg></div><div class="logo-text"><span class="logo-name" style="color:white">RDP Auto</span><span class="logo-sub">& Small Engine</span></div></div><p>West Yarmouth's trusted mobile mechanic. Serving all of Cape Cod from Falmouth to Eastham.</p><div style="display:flex;gap:8px;align-items:center;font-size:0.85rem;color:rgba(255,255,255,0.5)"><svg width="14" height="14"><use href="#i-phone"/></svg> <a href="tel:7742092270" style="color:var(--amber2)">(774) 209-2270</a></div></div>
+    <div class="footer-col"><h4>Services</h4><a href="services.html">Auto Repair</a><a href="services.html">Oil Changes</a><a href="services.html">Brake Repair</a><a href="services.html">Small Engine</a><a href="services.html">Welding</a></div>
+    <div class="footer-col"><h4>Company</h4><a href="index.html">Home</a><a href="service-area.html">Service Area</a><a href="pricing.html">Pricing</a><a href="contact.html">Contact</a></div>
+    <div class="footer-col"><h4>Service Area</h4><a href="service-area.html">Falmouth</a><a href="service-area.html">Barnstable</a><a href="service-area.html">Yarmouth</a><a href="service-area.html">Dennis</a><a href="service-area.html">Chatham</a><a href="service-area.html">Orleans</a></div>
+  </div>
+  <div class="footer-bottom"><span>© 2025 RDP Auto & Small Engine. West Yarmouth, MA.</span><span>Mobile mechanic serving Cape Cod, MA</span></div>
+</div></footer>
+
+<script>
+function toggleMenu(){document.getElementById('mobileMenu').classList.toggle('open')}
+const obs=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting)x.target.classList.add('in')})},{threshold:0.1});
+document.querySelectorAll('.reveal,.rl,.rr').forEach(el=>obs.observe(el));
+</script>
+</body>
+</html>
